@@ -9,9 +9,9 @@
 
         <div class = "loginDiv">
             <label id = "lblLogin">Sign Up</label>
-            <input type="email" placeholder="Email...">
-            <input type="password" placeholder = "Password...">
-            <button>Create Account</button>
+            <input type="email" placeholder="Email..." id = "userEmail">
+            <input type="password" placeholder = "Password..." id = "userPassword">
+            <button onclick="login()">Create Account</button>
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -27,5 +27,7 @@
             };
             firebase.initializeApp(config);
         </script>
+
+        <<script src="./login.js"></script>
     </body>
 </html>
