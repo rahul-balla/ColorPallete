@@ -1,0 +1,23 @@
+{
+  "name": "color",
+  "version": "1.0.0",
+  "description": "A web app version of the arcade game ColorPallete",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahul-balla/ColorPallete.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahul-balla/ColorPallete/issues"
+  },
+  "homepage": "https://github.com/rahul-balla/ColorPallete#readme",
+  "dependencies": {
+    "express-auth-route": "^1.1.0",
+    "firebase": "^4.12.1"
+  }
+}
