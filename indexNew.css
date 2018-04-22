@@ -1,0 +1,53 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+input, button, label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+#navBar {
+    background: black;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+}
+
+#btnSignUp{
+    color: white;
+    position: relative;
+    left: 90%;
+    background: black;
+    border: 0 solid black;
+    top:50%;
+    transform: translateY(-50%); 
+}
+
+#btnLogIn{
+    color: white;
+    position: relative;
+    left: 80%;
+    background: black;
+    border: 0 solid black;
+    top:50%;
+    transform: translateY(-50%); 
+}
+
+#btnLogin:hover, #btnSignUp:hover {
+    color: lightgreen;
+}
+
+#btnPlayGuest {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    background: white;
+    border: 0px;
+}
+
+#btnPlayGuest:hover {
+    color:white;
+    background: blue;
+    border: 0px;
+}
