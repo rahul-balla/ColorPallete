@@ -37,7 +37,7 @@
         </div>
 
 
-        <transition name="fade">
+        <!-- <transition name="fade"> -->
             <div id="divSignIn" class="divModal">
                 <div id="divSignInForm" class="divModalForm">
                     <div class="divModalTitle">Log In
@@ -52,9 +52,9 @@
                     <button id="btnSignIn" onclick="login()">Log In</button>
                 </div>
             </div>
-        </transition>
+        <!-- </transition> -->
 
-        <transition name="fade">
+        <!-- <transition name="fade"> -->
             <div id="divSignUp" class="divModal">
                 <div id="divSignInForm" class="divModalForm">
                     <div class="divModalTitle">Sign Up
@@ -69,12 +69,12 @@
                     <button id="btnSignIn" onclick = "signUp()">Create Account</button>
                 </div>
             </div>
-        </transition>
+        <!-- </transition> -->
 
         <div id="divAlert" class="divModal">
             <div id="divAlertForm" class="divModalForm">
                 <div class="divModalTitle">
-                    CS390 Time Log
+                    ColorPalette
                     <span id="spanAlertX" class="spanModalX" onclick="closeModal()">&times;</span>
                 </div>
                 <div id="divAlertMessage"><label id = "lblAlertMessage">hello</div>
@@ -83,11 +83,9 @@
             </div>
         </div>
 
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>        
         <script type = "text/javascript" src = "./func.js"></script>
-        <script type = "text/javascript" src = "/socket.io/socket.io.js"></script>
-        <script type = "text/javascript" src = "./chat.js"></script>
+        <!-- <script type = "text/javascript" src = "/socket.io/socket.io.js"></script> -->
     </body>
 </html>

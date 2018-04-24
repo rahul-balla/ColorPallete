@@ -1,0 +1,40 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+input, button, label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+#chatBox {
+    position: fixed;
+    width: 350px;
+    height: 400px;
+    top: 10%;
+    left: 70%;
+    border: 2px solid black;
+}
+
+#handle {
+    position: relative;
+    width: 344px;
+    display: block;
+    top: 83%;
+}
+
+#message {
+    position: relative;
+    width: 344px;
+    display: block;
+    top: 83%;
+}
+
+#send {
+    position: relative;
+    width: 100%;
+    display: block;
+    top: 83%;
+    background: rgb(177, 177, 245);
+
+}

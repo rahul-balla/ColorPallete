@@ -33,7 +33,7 @@ function btnOK_onclick(){
 
 function login(){
     var uri = "http://localhost:8000/";
-    var endpoint = "auth/signin/"
+    var endpoint = "auth/signin"
 
     var user = document.getElementById("txtUserSignIn").value;
     var password = document.getElementById("txtPassSignIn").value;
@@ -73,18 +73,19 @@ function login(){
 }
 
 function playButton(){
-    var uri = "http://localhost:8000/";
-    var endpoint = "game/"
+    window.location.href = "./game.html"
+    // var uri = "http://localhost:8000/";
+    // var endpoint = "game/"
 
-    console.log(uri + endpoint);
-    fetch((uri + endpoint), {
-        method: "GET",
-    })
-    .catch(fetchError)
+    // console.log(uri + endpoint);
+    // fetch((uri + endpoint), {
+    //     method: "GET",
+    // })
+    // .catch(fetchError)
 
-    function fetchError(error){
-        window.alert(error);
-    }
+    // function fetchError(error){
+    //     window.alert(error);
+    // }
 }
 
 function signUp(){

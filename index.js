@@ -27,7 +27,7 @@ var database = firebase.database();
 
 // app.use(express.static('/Users/rahulballa/Desktop/ColorPallete'))
 app.use('/auth/signin', express.static('/Users/rahulballa/Desktop/ColorPallete'))
-// app.use('/game', express.static('/Users/rahulballa/Desktop/ColorPallete'))
+//app.use('/game', express.static('/Users/rahulballa/Desktop/ColorPallete'))
 
 app.get('/', function (req, res) {
   res.redirect(301, '/auth/signin');
@@ -39,6 +39,8 @@ app.get('/auth/signin', function (req, res) {
 })
 
 app.post('/auth/signin/', function (req, res) {
+  console.log("went inside login");
+  
   var userID = req.body.userID;
   var userPassword = req.body.userPassword;
   var id = req.body.id;
@@ -58,28 +60,34 @@ app.post('/auth/signin/', function (req, res) {
   if (id === 0){
     firebase.auth().createUserWithEmailAndPassword(userID, userPassword).catch(function(error) {
       // Handle Errors here.
+      flag = 1;
+      // console.log("inside creating username, flag: " + flag);
       console.log("did not create account");
       console.log("error code: " + error.code);
       console.log("error message: " + error.message);
       var errorCode = error.code;
       var errorMessage = error.message;
-      flag = 1;
+      
       // ...
     });
   }
-
-  if (id === 1) {
+  
+  else if (id === 1) { 
     firebase.auth().signInWithEmailAndPassword(userID, userPassword).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
+      flag = 1;
       console.log("did not log in");      
       console.log("error code: " + error.code);
       console.log("error message: " + error.message);
-      flag = 1;
+      
       // ...
     });
   }
+  
+
+  console.log("flag: " + flag);
 
   if(flag === 1){
     return res.status(401).json({
@@ -91,15 +99,20 @@ app.post('/auth/signin/', function (req, res) {
       message: "authentication successful"
     })
   }
-
-  // res.sendFile(path.join(__dirname+'/game.html'));
 })
 
-app.get('/game', function (req, res) {
+app.use('/game', function (req, res) {
   res.sendFile(path.join(__dirname + '/game.html'));
   // console.log("path: " + __dirname + '/game.html');
-  // console.log("accessed game endpoint");
+  //res.render('game.html');
+  res.redirect(301,'/trial');
+  console.log("accessed game endpoint");
 })
+
+app.use('/trial',function(req,res){
+  res.sendFile(path.join(__dirname+'/game.html'));
+  console.log("idk");
+});
 
 
 io.on('connection', function(socket){
