@@ -116,10 +116,14 @@ app.use('/trial',function(req,res){
 
 
 io.on('connection', function(socket){
-  console.log('a user connected');
-  socket.on('chat message', function(msg){
-    console.log('message: ' + msg);
-  });
+  console.log('a user connected', socket.id);
+  // socket.on('chat message', function(msg){
+  //   console.log('message: ' + msg);
+  // });
+  socket.on('chat', function(data){
+    console.log("listenend to chat");
+    io.sockets.emit('chat', data);
+  })
 });
 
 
