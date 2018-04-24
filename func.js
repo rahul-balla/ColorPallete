@@ -1,3 +1,5 @@
+// login page functions collection
+
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
