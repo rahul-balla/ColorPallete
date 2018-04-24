@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rahul-balla/ColorPallete#readme",
   "dependencies": {
+    "express": "^4.16.3",
     "express-auth-route": "^1.1.0",
     "firebase": "^4.12.1"
   }
