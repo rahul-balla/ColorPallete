@@ -29,18 +29,90 @@ ctx.stroke();
 }
 
 function twoPartitions() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath()
+    // ctx.moveTo(380, 350) // 200 radius
+    // ctx.lineTo(380, 550)
+    ctx.moveTo(380, 350)
+    ctx.lineTo(380, 150)
+    // ctx.moveTo(380, 350) // 200 radius
+    // ctx.lineTo(580, 350)
+    // ctx.moveTo(380, 350)
+    // ctx.lineTo(180, 350)
+    // ctx.moveTo(380, 350)
+    // ctx.lineTo(380 + (200/Math.sqrt(2)), 350 + (200/Math.sqrt(2)))
+    // ctx.moveTo(380, 350)
+    // ctx.lineTo(380 - (200/Math.sqrt(2)), 350 - (200/Math.sqrt(2)))
+    ctx.moveTo(380, 350)
+    ctx.lineTo(380 + (200/Math.sqrt(2)), 350 - (200/Math.sqrt(2)))
+    ctx.moveTo(380, 350)
+    // ctx.lineTo(380 - (200/Math.sqrt(2)), 350 + (200/Math.sqrt(2)))
+    ctx.stroke()
+    ctx.beginPath()
+    ctx.beginPath()
+    ctx.arc(380,350,200,degreesToRadians(-90), degreesToRadians(-45));
+    // ctx.strokeStyle = "black"
+    ctx.fillStyle = "red"
+    // ctx.closePath()    
+    ctx.fill()
+    // ctx.closePath()
+    ctx.stroke()
+
+    // var c2 = document.getElementById("myCanvas");
+    // var ctx2 = c2.getContext("2d");
+    // ctx2.arc(380,350,200,degreesToRadians(-45), degreesToRadians(0));
+    // console.log("blue")
+    // ctx2.fillStyle = "blue"
+    // ctx2.fill()
+    // ctx2.stroke()
+}
+
+function threePartitions() {
+    var c=document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath()
+    ctx.moveTo(380, 350)
+    ctx.lineTo(380, 150)
+    ctx.moveTo(380, 350)
+    ctx.lineTo(500, 510)
+    ctx.moveTo(380, 350)
+    ctx.lineTo(220, 470)
+    ctx.stroke()
+    ctx.beginPath()
+    // ctx.beginPath()
+    ctx.arc(380,350,200,degreesToRadians(-90), degreesToRadians(270));
+    ctx.stroke()
+}
+
+
+function twoPartitions2() {
+
     var c=document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.beginPath()
     ctx.moveTo(380, 350) // 200 radius
-    ctx.lineTo(380, 550)
+    ctx.lineTo(580, 350)
     ctx.moveTo(380, 350)
-    ctx.lineTo(380, 150)
+    ctx.lineTo(180, 350)
     ctx.stroke()
     ctx.beginPath()
     // ctx.beginPath()
-    ctx.arc(380,350,200,0, degreesToRadians(360));
+    ctx.arc(380,350,200,0, degreesToRadians(180));
+    ctx.fillStyle = "blue"
+    ctx.fill()
+    ctx.closePath()
     ctx.stroke()
+    
+
+    var c2=document.getElementById("myCanvas");
+    var ctx2 = c2.getContext("2d");
+    ctx2.arc(380,350,200, degreesToRadians(180), degreesToRadians(360));
+    ctx2.fillStyle = "red"
+    ctx2.fill()
+    ctx2.stroke()
+    // }
+
 }
 
 function draw() {
