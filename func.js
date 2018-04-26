@@ -1,3 +1,5 @@
+// login page functions collection
+
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
@@ -39,7 +41,7 @@ function login(){
     var password = document.getElementById("txtPassSignIn").value;
     console.log("userID: " + user);
     console.log("userPassword: " + password);
-    
+
     var credentials = {
         userID: document.getElementById("txtUserSignIn").value,
         userPassword: document.getElementById("txtPassSignIn").value,
@@ -95,7 +97,7 @@ function signUp(){
     var password = document.getElementById("txtUserPassword").value;
     console.log("userID: " + user);
     console.log("userPassword: " + password);
-    
+
     var credentials = {
         userID: document.getElementById("txtUsername").value,
         userPassword: document.getElementById("txtUserPassword").value,
