@@ -1,9 +1,19 @@
+<<<<<<< rahul
+var globalDisplayName;
+=======
 // login page functions collection
+>>>>>>> master
 
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
     document.getElementById("divAlert").style.display = "none";
+
+    // firebase.auth().onAuthStateChanged(function(user) {
+    //     if (user) {
+    //       window.location.href = "game.html"
+    //     }
+    // });
 }
 
 function displaySignUp(){
@@ -33,68 +43,48 @@ function btnOK_onclick(){
     document.getElementById("divAlert").style.display = "none";
 }
 
-function login(){
-    var uri = "http://localhost:8000/";
-    var endpoint = "auth/signin/"
 
+function login(){
     var user = document.getElementById("txtUserSignIn").value;
     var password = document.getElementById("txtPassSignIn").value;
     console.log("userID: " + user);
     console.log("userPassword: " + password);
+<<<<<<< rahul
+=======
 
     var credentials = {
         userID: document.getElementById("txtUserSignIn").value,
         userPassword: document.getElementById("txtPassSignIn").value,
         id: 1
     }
+>>>>>>> master
 
-    fetch((uri + endpoint), {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
+    firebase.auth().signInWithEmailAndPassword(user, password)
+    .then(function (user) {
+        displayAlert("Authentication successful")
     })
-    .then(checkResponse)
-    // .then(checkJSON)
-    .catch(fetchError);
-
-    function checkResponse(response){
-        if(!response.ok){
-            window.alert(response.status)
-            displayAlert("Invalid credentials")
-        }
-        else{
-           displayAlert("Authentication successful");
-        }
-    }
-
-    function fetchError(error){
-        displayAlert(error)
-    }
+    .then(function (){
+        window.location.href = "game.html"
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      displayAlert(error.message);      
+      // ...
+    });    
 }
 
 function playButton(){
-    var uri = "http://localhost:8000/";
-    var endpoint = "game/"
-
-    console.log(uri + endpoint);
-    fetch((uri + endpoint), {
-        method: "GET",
-    })
-    .catch(fetchError)
-
-    function fetchError(error){
-        window.alert(error);
-    }
+    window.location.href = "./game.html"
 }
 
 function signUp(){
-    var uri = "http://localhost:8000/";
-    var endpoint = "auth/signin/"
-
     var user = document.getElementById("txtUsername").value;
     var password = document.getElementById("txtUserPassword").value;
+<<<<<<< rahul
+    var displayNameUser = document.getElementById("txtDisplayName").value;
+=======
     console.log("userID: " + user);
     console.log("userPassword: " + password);
 
@@ -103,29 +93,37 @@ function signUp(){
         userPassword: document.getElementById("txtUserPassword").value,
         id: 0
     }
+>>>>>>> master
 
-    fetch((uri + endpoint), {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-    })
-    .then(checkResponse)
-    // .then(checkJSON)
-    .catch(fetchError);
+    console.log("display name: " + displayNameUser)
 
-    function checkResponse(response){
-        if(!response.ok){
-            window.alert(response.status)
-            displayAlert("Invalid credentials")
-        }
-        else{
-           displayAlert("Authentication successful");
-        }
+    if (user == "" || password === "" || displayNameUser === "") {
+        console.log("inside if");
+        displayAlert("Please enter a valid email, password, and display name");
     }
-
-    function fetchError(error){
-        displayAlert(error)
+    else {
+        console.log("inside else");
+        firebase.auth().createUserWithEmailAndPassword(user, password)
+        .then((success) => {
+            console.log("success")
+            success.updateProfile({
+                displayName: displayNameUser
+            })
+            .then(function (sucess){
+                globalDisplayName = success.displayName;
+                console.log(success.displayName);
+            })
+            .then(function () {
+                window.location.href = "./game.html"
+            })
+            .catch(function (error){
+                displayAlert(error.message)
+            })
+        })
+        .catch(function(error) {
+        // Handle Errors here.
+        displayAlert(error.message);
+        // ...
+        });
     }
 }
