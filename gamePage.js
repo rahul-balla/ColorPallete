@@ -1,19 +1,37 @@
-var start = window.performance.now()
-var color = ""
-var end = 0
+
+// var play = document.getElementById("btnPlay")
 // var e = document.getElementsByClassName("rect1");
 // $(document).read(function () {
+
+function play2() {
+    console.log("starting game")
+    document.getElementById("rect1").style.display = 'block'
+    startGame()
+}
+
+function playAgain() {
+    console.log("playing again")
+    startGame()
+}
+
+function startGame() {
+
+    var start = window.performance.now()
+    var color = ""
+    var end = 0
+    var spaceCheck = 0
+
     var counter = 0;
     $(body).keyup(function(e){
         if (e.keyCode == 32) {
             console.log("listened to spacebar")
             if (counter === 0) {
-                $(".rect1").css({
+                $("#rect1").css({
                     '-webkit-animation-play-state': 'paused'
 
                 })
 
-                color = $(".rect1").css("background-color")
+                color = $("#rect1").css("background-color")
 
                 // console.timeEnd()
 
@@ -40,10 +58,16 @@ var end = 0
                 })
                 counter++;
             } else {
+                document.getElementById("btnPlay").innerHTML = "Play again"
+                if (!(spaceCheck >= 1)) {
                 end = window.performance.now()
                 end -= start
                 end /= 1000
                 console.log(end + " secs")
+                } 
+                spaceCheck++
+                document.getElementById("rect1").style.display = 'none'
+                return
             }
             }
             else if (counter === 2) {
@@ -60,10 +84,15 @@ var end = 0
                 })
                 counter++;
             } else {
-                end = window.performance.now()
-                end -= start
-                end /= 1000
-                console.log(end + " secs")
+                if (!(spaceCheck >= 1)) {
+                    document.getElementById("btnPlay").innerHTML = "Play again"
+                    end = window.performance.now()
+                    end -= start
+                    end /= 1000
+                    console.log(end + " secs")
+                    }
+                    spaceCheck++
+                    return
             }
             }
             else if (counter === 3) {
@@ -79,11 +108,15 @@ var end = 0
                 } else {
                     console.log("You lost :(")
                 }
-
+                if (!(spaceCheck >= 1)) {
+                    document.getElementById("btnPlay").innerHTML = "Play again"
                     end = window.performance.now()
                     end -= start
                     end /= 1000
                     console.log(end + " secs")
+                    }
+                    spaceCheck++
+                    return
                 // $(".rect4").css({
                 //     'display': 'block'
                 // })
@@ -92,3 +125,11 @@ var end = 0
 
         }
     })
+}
+
+
+//     document.getElementById("btnPlay").addEventListener("click", myFunc)
+
+// function myFunc() {
+
+// }
