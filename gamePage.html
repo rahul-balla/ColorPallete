@@ -94,13 +94,16 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script>
-        var start = window.performance.now()
+        var start = 0
+        start = window.performance.now()
+        var spacebarCheck = 0
         var color = ""
         var end = 0
         // var e = document.getElementsByClassName("rect1");
         // $(document).read(function () {
             var counter = 0;
             $(body).keyup(function(e){
+                
                 if (e.keyCode == 32) {
                     console.log("listened to spacebar")
                     if (counter === 0) {
@@ -122,6 +125,7 @@
                         console.log("counter: " + counter);
                     }
                     else if (counter === 1) {
+
                         $(".rect2").css({
                             '-webkit-animation-play-state': 'paused'
                         })
@@ -136,10 +140,16 @@
                         })
                         counter++;
                     } else {
+
+                        if (!(spacebarCheck >= 1)) {
                         end = window.performance.now()
                         end -= start
                         end /= 1000
                         console.log(end + " secs")
+                        end = 0
+                        }
+                        spacebarCheck++
+                        return
                     }
                     }
                     else if (counter === 2) {
@@ -156,10 +166,13 @@
                         })
                         counter++;
                     } else {
+                        if (!(spacebarCheck >= 1)) {
                         end = window.performance.now()
                         end -= start
                         end /= 1000
                         console.log(end + " secs")
+                        }
+                        spacebarCheck++
                     }
                     }
                     else if (counter === 3) {
@@ -176,10 +189,13 @@
                             console.log("You lost :(")
                         }
 
-                            end = window.performance.now()
-                            end -= start
-                            end /= 1000
-                            console.log(end + " secs")
+                        if (!(spacebarCheck >= 1)) {
+                        end = window.performance.now()
+                        end -= start
+                        end /= 1000
+                        console.log(end + " secs")
+                        }
+                        spacebarCheck++
                         // $(".rect4").css({
                         //     'display': 'block'
                         // })
