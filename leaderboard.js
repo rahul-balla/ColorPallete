@@ -9,7 +9,7 @@ function body_onload(){
 console.log("uName: " + uName)
 function btnAdd_onclick(){
 	// store it to firebase
-	
+
 	var user = document.getElementById("txt_uName").value;
 	var score = document.getElementById("txtUserPassword").value;
 	console.log("userID: " + user);
