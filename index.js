@@ -31,11 +31,12 @@ app.use('/auth/signin', express.static('/Users/rahulballa/Desktop/ColorPallete')
 //app.use('/game', express.static('/Users/rahulballa/Desktop/ColorPallete'))
 
 app.get('/', function (req, res) {
+  console.log("hello")
   res.redirect(301, '/auth/signin');
-  //res.send("Hello")
 })
 
 app.get('/auth/signin', function (req, res) {
+  console.log("inside get post")
   res.sendFile(path.join(__dirname + '/indexNew.html'));
 })
 

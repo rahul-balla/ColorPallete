@@ -22,7 +22,7 @@ input, button, label {
     border:3px solid #3B5998;
     background-color:#ffffff;
     box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    display: block;
+    /* display: block; */
     top:50%;
     transform: translateY(-50%); 
 }
@@ -43,6 +43,12 @@ input, button, label {
     position:relative;
     width:450px;
     height:270px;
+}
+
+#divSignUpForm {
+    position:relative;
+    width:450px;
+    height:400px;
 }
 
 #lblSignInEmployeeID {
@@ -85,6 +91,20 @@ input, button, label {
     position:absolute;
     left:190px;
     top:120px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#lblDisplayName {
+    position:absolute;
+    left:65px;
+    top:190px;
+}
+
+#txtDisplayName {
+    position:absolute;
+    left:190px;
+    top:180px;
     border-radius: 5px;
     padding: 10px;
 }

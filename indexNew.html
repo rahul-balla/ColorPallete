@@ -37,14 +37,14 @@
         </div>
 
 
-        <!-- <transition name="fade"> -->
+        <transition name="fade">
             <div id="divSignIn" class="divModal">
                 <div id="divSignInForm" class="divModalForm">
                     <div class="divModalTitle">Log In
                         <span id="spanAlertX" class="spanModalX" onclick = "closeModal()">&times;</span>
                     </div>
         
-                    <label id="lblSignInEmployeeID">Username:</label>
+                    <label id="lblSignInEmployeeID">Email:</label>
                     <input type="text" id="txtUserSignIn"/>
                     <label id="lblPassword">Password:</label>
                     <input type="password" id="txtPassSignIn"/>
@@ -52,24 +52,26 @@
                     <button id="btnSignIn" onclick="login()">Log In</button>
                 </div>
             </div>
-        <!-- </transition> -->
+        </transition>
 
-        <!-- <transition name="fade"> -->
+        <transition name="fade">
             <div id="divSignUp" class="divModal">
-                <div id="divSignInForm" class="divModalForm">
+                <div id="divSignUpForm" class="divModalForm">
                     <div class="divModalTitle">Sign Up
                         <span id="spanAlertX" class="spanModalX" onclick = "closeModal()">&times;</span>
                     </div>
         
-                    <label id="lblSignInEmployeeID">Username: </label>
+                    <label id="lblSignInEmployeeID">Email: </label>
                     <input type="text" id="txtUsername"/>
                     <label id="lblPassword">Password:</label>
                     <input type="password" id="txtUserPassword"/>
+                    <label id="lblDisplayName">Display Name:</label>
+                    <input type="text" id="txtDisplayName"/>
         
                     <button id="btnSignIn" onclick = "signUp()">Create Account</button>
                 </div>
             </div>
-        <!-- </transition> -->
+        </transition>
 
         <div id="divAlert" class="divModal">
             <div id="divAlertForm" class="divModalForm">
@@ -87,6 +89,7 @@
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>        
         <script type = "text/javascript" src = "./func.js"></script>
+        <script type = "text/javascript" src = "./chat.js"></script>
 
         <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
         <script>
