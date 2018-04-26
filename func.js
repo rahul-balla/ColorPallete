@@ -1,15 +1,15 @@
 
-var globalDisplayName;
-
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
     document.getElementById("divAlert").style.display = "none";
     // document.getElementsByClassName("divModal").style.display = "none";
 
+    var user = firebase.auth().currentUser;
+    console.log("user is: " + user);
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          window.location.href = "game.html"
+          window.location.href = "gamePage.html"
         }
     });
 }
