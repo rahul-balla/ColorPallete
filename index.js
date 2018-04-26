@@ -40,7 +40,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/auth/signin', function (req, res) {
-  console.log("inside get post")
+  console.log("inside /auth/signin post")
   res.sendFile(path.join(__dirname + '/indexNew.html'));
 })
 

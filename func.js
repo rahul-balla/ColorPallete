@@ -1,16 +1,17 @@
-var globalDisplayName;
 
+var globalDisplayName;
 
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
     document.getElementById("divAlert").style.display = "none";
+    // document.getElementsByClassName("divModal").style.display = "none";
 
-    // firebase.auth().onAuthStateChanged(function(user) {
-    //     if (user) {
-    //       window.location.href = "game.html"
-    //     }
-    // });
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          window.location.href = "game.html"
+        }
+    });
 }
 
 function displaySignUp(){
@@ -47,7 +48,6 @@ function login(){
     console.log("userID: " + user);
     console.log("userPassword: " + password);
 
-
     firebase.auth().signInWithEmailAndPassword(user, password)
     .then(function (user) {
         displayAlert("Authentication successful")
@@ -72,7 +72,6 @@ function signUp(){
     var user = document.getElementById("txtUsername").value;
     var password = document.getElementById("txtUserPassword").value;
     var displayNameUser = document.getElementById("txtDisplayName").value;
-
 
     console.log("display name: " + displayNameUser)
 
