@@ -46,7 +46,7 @@ input, button, label {
 }
 
 #divSignUpForm {
-    /* position:relative; */
+    position:relative;
     width:450px;
     height:400px;
 }
