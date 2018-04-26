@@ -63,6 +63,12 @@
                 display: none;
             }
 
+            #lblColor {
+                position: absolute;
+                left: 100px;
+                top: 300px;
+            }
+
             @keyframes argh-my-eyes {
                 0% { background-color: orange}
                 20.5% { background-color: orange}
@@ -93,6 +99,7 @@
             <div class="rect3"></div>
             <div class="rect4"></div>
         </div>
+        <label id = "lblColor">Color</label>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script>
@@ -106,6 +113,9 @@
                             $(".rect1").css({
                                 '-webkit-animation-play-state': 'paused'
                             })
+
+                            var color = $(".rect1").css("background-color");
+                            console.log("background color: " + color);
 
                             $(".rect2").css({
                                 'display': 'block'
