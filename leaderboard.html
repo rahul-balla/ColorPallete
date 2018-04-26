@@ -4,26 +4,33 @@
 	<meta charset="utf-8">
 	<title>Leaderboard Page</title>
         <link rel="stylesheet" type="text/css" href="leaderboard.css">
-        <script language="javascript" type="text/javascript" src="leaderboard.js"></script>
+			
+				
 </head>
-
-<style type="text/css">
-body{
-	background-color: blue;
-}
-</style>
 
 <body onload="body_onload()">
 
 	<h1>Leaderboard</h1>
 
+	<pre id ="object">
+
+	</pre>
+
+	<pre id = "playerData">
+
+	</pre>
+
+	<ul id='list'>
+		
+	</ul>
+
 	<!-- create leaderboard table -->
 	<h2 id = "uName" </h2>
 	<h2 id = "uScore" </h2>
-	<h2 id = "timestame" </h2>
+	<h2 id = "timestamp" </h2>
 
 	<!-- user input -->
-	<label id = "lbl_uName"> uNmae </label>
+	<label id = "lbl_uName"> uName </label>
 	<input type = "text" id="txt_uName">
 
 	<label id = "lbl_uScore"> uScore </<label>
@@ -32,7 +39,6 @@ body{
 	<label id = "labl_timeStamp"> TimeStamp </<label>
 	<input type = "text" id="txt_timestamp">
 
-	<input type="button" id="btnAdd" value="Store into FireBase" />
 	<button id="btnAdd" onclick="btnAdd_onclick()">Storing to Firebase</button>
 
 
@@ -40,7 +46,7 @@ body{
 
 
 
-<div id="container">
+<!-- <div id="container">
   <div class="row">
     <div class="name">Player1</div><div class="score">430</div>
   </div>
@@ -60,28 +66,9 @@ body{
   <div class="row">
     <div class="name">Player5</div><div class="score">495</div>
   </div>
-</div>
-
-
+</div> -->
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-<script>
-		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyCBY1DZnogGxG4XOxRvRHnigMS4XJ9Q094",
-			authDomain: "colorpalettecs252.firebaseapp.com",
-			databaseURL: "https://colorpalettecs252.firebaseio.com",
-			projectId: "colorpalettecs252",
-			storageBucket: "colorpalettecs252.appspot.com",
-			messagingSenderId: "306554441966"
-		};
-		firebase.initializeApp(config);
+<script language="javascript" type="text/javascript" src="leaderboard.js"></script>
 
-		// Get a reference to the database service
-		var database = firebase.database();
-		var bigOne = document.getElementById('bigOne');
-		// var dbRef = firebase.database().ref().child('text');
-		// dbRef.on('value', snap => bigOne.innerText = snap.val());
-
-</script>
 </body>
 </html>
