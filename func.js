@@ -53,7 +53,7 @@ function login(){
         displayAlert("Authentication successful")
     })
     .then(function (){
-        window.location.href = "game.html"
+        window.location.href = "gamePage.html"
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -65,7 +65,7 @@ function login(){
 }
 
 function playButton(){
-    window.location.href = "./game.html"
+    window.location.href = "./gamePage.html"
 }
 
 function signUp(){
@@ -92,7 +92,7 @@ function signUp(){
                 console.log(success.displayName);
             })
             .then(function () {
-                window.location.href = "./game.html"
+                window.location.href = "./gamePage.html"
             })
             .catch(function (error){
                 displayAlert(error.message)
