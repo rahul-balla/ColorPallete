@@ -20,6 +20,49 @@
                 -webkit-animation: argh-my-eyes 2s infinite;
             }
 
+            .rect2 {
+                position: absolute;
+                left:150px;
+                width: 147px;
+                height: 150px;
+                background: red;
+                border-bottom: 3px solid black;
+                border-right: 3px solid black;
+                -webkit-animation: argh-my-eyes 2s infinite;
+                border-left: 3px solid black;
+                display: none;
+            }
+
+            .rect3 {
+                position: absolute;
+                top: 150px;
+                width: 150px;
+                height: 147px;
+                background: red;
+                border-bottom: 3px solid black;
+                border-top: 3px solid black;
+                border-right: 3px solid black;
+                -webkit-animation: argh-my-eyes 2s infinite;
+                /* border-left: 3px solid black; */
+                display: none;
+            }
+
+            .rect4 {
+                position: absolute;
+                left: 150px;
+                top: 150px;
+                width: 147px;
+                height: 147px;
+                background: red;
+                border-bottom: 3px solid black;
+                border-top: 3px solid black;
+                border-right: 3px solid black;
+                border-left: 3px solid black;
+                -webkit-animation: argh-my-eyes 2s infinite;
+                /* border-left: 3px solid black; */
+                display: none;
+            }
+
             @keyframes argh-my-eyes {
                 20% { background-color: white}
                 40% { background-color: blue}
@@ -37,36 +80,69 @@
     <body id = "body">
         <div id = "wholeRectangle">
             <div class="rect1"></div>
-            <div id="rect2"></div>
-            <div id="rect3"></div>
-            <div id="rect4"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script>
             // var e = document.getElementsByClassName("rect1");
             // $(document).read(function () {
+                var counter = 0;
                 $(body).keyup(function(e){
                     if (e.keyCode == 32) {
-                 
                         console.log("listened to spacebar")
-                        $(".rect1").css({
-                            '-webkit-animation-play-state': 'paused'
-                        })
-                            
+                        if (counter === 0) {
+                            $(".rect1").css({
+                                '-webkit-animation-play-state': 'paused'
+                            })
 
-                        console.log("space pressed");
+                            $(".rect2").css({
+                                'display': 'block'
+                            })
+                            console.log("block 1 paused");
+                            counter++;
+                            console.log("counter: " + counter);
+                        }
+                        else if (counter === 1) {
+                            $(".rect2").css({
+                                '-webkit-animation-play-state': 'paused'
+                            })
+                            $(".rect3").css({
+                                'display': 'block'
+                            })
+                            counter++;
+                        }
+                        else if (counter === 2) {
+                            $(".rect3").css({
+                                '-webkit-animation-play-state': 'paused'
+                            })
+                            $(".rect4").css({
+                                'display': 'block'
+                            })
+                            counter++;
+                        }
+                        else if (counter === 3) {
+                            $(".rect4").css({
+                                '-webkit-animation-play-state': 'paused'
+                            })
+                            // $(".rect4").css({
+                            //     'display': 'block'
+                            // })
+                            counter++;
+                        }
                     }
                 })
 
-                $(".rect1").keyup(function (e){
-                    if(e.keyCode == 32){
-                        console.log("listened to spacebar")
-                        $(this).css({
-                            '-webkit-animation-play-state': 'paused'
-                        })
-                    }
-                })
+                // $(".rect1").keyup(function (e){
+                //     if(e.keyCode == 32){
+                //         console.log("listened to spacebar")
+                //         $(this).css({
+                //             '-webkit-animation-play-state': 'paused'
+                //         })
+                //     }
+                // })
             // })
             
             // window.addEventListener("keydown", function (event){
