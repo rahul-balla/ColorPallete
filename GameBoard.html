@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Circle</title>
+    <style>
+      /* #myCanvas {
+        background: red;
+      } */
+      
+      pie {
+        /* position: absolute;
+        top: 100px;
+        left:50px; */
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 50%;
+    background-color: green;
+    border: 2px solid green;
+    float: left;
+    margin: 1em;
+}
+
+.ten {
+      position: absolute;
+        top: 305px;
+        left:335px;
+    background-image:
+        linear-gradient(126deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+.twentyfive {
+    background-image:
+        linear-gradient(180deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+.fifty {
+    background-image:
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+/* Slices greater than 50% require first gradient
+   to be transparent -> green */
+
+.seventyfive {
+    background-image:
+        linear-gradient(180deg, transparent 50%, green 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+.onehundred {
+    background-image: none;
+}
+
+ @keyframes argh-my-eyes {
+   25%   { background-color: yellow}
+   50% { background-color: black}
+   75% {background-color: blue }
+   100% { background-color: red}
+
+  } 
+  body {
+  animation: argh-my-eyes 10s 1;
+}
+
+    </style>
+  </head>
+
+  <body onload= "twoPartitions()">
+
+      <div id = "arc"> 
+         <canvas id="myCanvas" width="750" height="690" style = "border:1px solid black";>
+
+        </canvas> 
+       </div>
+
+    <script src = "board.js"></script>
+
+    <pie class="ten"></pie>
+<pie class="twentyfive"></pie>
+<pie class="fifty"></pie>
+<pie class="seventyfive"></pie>
+<pie class="onehundred"></pie>
+    
+
+  </body>
+</html>
