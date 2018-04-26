@@ -9,7 +9,7 @@ function body_onload(){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          window.location.href = "game.html"
+          window.location.href = "gamePage.html"
         }
     });
 }
@@ -53,7 +53,7 @@ function login(){
         displayAlert("Authentication successful")
     })
     .then(function (){
-        window.location.href = "game.html"
+        window.location.href = "gamePage.html"
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -65,7 +65,7 @@ function login(){
 }
 
 function playButton(){
-    window.location.href = "./game.html"
+    window.location.href = "./gamePage.html"
 }
 
 function signUp(){
