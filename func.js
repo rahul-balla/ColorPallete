@@ -92,7 +92,7 @@ function signUp(){
                 console.log(success.displayName);
             })
             .then(function () {
-                window.location.href = "./game.html"
+                window.location.href = "./gamePage.html"
             })
             .catch(function (error){
                 displayAlert(error.message)
