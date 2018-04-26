@@ -1,4 +1,8 @@
+<<<<<<< rahul
 var globalDisplayName;
+=======
+// login page functions collection
+>>>>>>> master
 
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
@@ -45,6 +49,15 @@ function login(){
     var password = document.getElementById("txtPassSignIn").value;
     console.log("userID: " + user);
     console.log("userPassword: " + password);
+<<<<<<< rahul
+=======
+
+    var credentials = {
+        userID: document.getElementById("txtUserSignIn").value,
+        userPassword: document.getElementById("txtPassSignIn").value,
+        id: 1
+    }
+>>>>>>> master
 
     firebase.auth().signInWithEmailAndPassword(user, password)
     .then(function (user) {
@@ -69,7 +82,18 @@ function playButton(){
 function signUp(){
     var user = document.getElementById("txtUsername").value;
     var password = document.getElementById("txtUserPassword").value;
+<<<<<<< rahul
     var displayNameUser = document.getElementById("txtDisplayName").value;
+=======
+    console.log("userID: " + user);
+    console.log("userPassword: " + password);
+
+    var credentials = {
+        userID: document.getElementById("txtUsername").value,
+        userPassword: document.getElementById("txtUserPassword").value,
+        id: 0
+    }
+>>>>>>> master
 
     console.log("display name: " + displayNameUser)
 

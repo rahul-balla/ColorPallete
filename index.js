@@ -1,3 +1,4 @@
+// server document
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -27,8 +28,10 @@ app.use(bodyParser.urlencoded({
 // var database = firebase.database();
 
 // app.use(express.static('/Users/rahulballa/Desktop/ColorPallete'))
+
 app.use('/auth/signin', express.static('/Users/rahulballa/Desktop/ColorPallete'))
-//app.use('/game', express.static('/Users/rahulballa/Desktop/ColorPallete'))
+// app.use('/auth/signin', express.static('/Users/kimeric/Desktop/CS252/ColorPallete'))
+
 
 app.get('/', function (req, res) {
   console.log("hello")
