@@ -1,3 +1,4 @@
+<!-- login page -->
 <html>
     <head>
         <title>Color Palette</title>
@@ -43,12 +44,14 @@
                     <div class="divModalTitle">Log In
                         <span id="spanAlertX" class="spanModalX" onclick = "closeModal()">&times;</span>
                     </div>
+
         
-                    <label id="lblSignInEmployeeID">Username:</label>
+                    <label id="lblSignInEmployeeID">Email:</label>
+
                     <input type="text" id="txtUserSignIn"/>
                     <label id="lblPassword">Password:</label>
                     <input type="password" id="txtPassSignIn"/>
-        
+
                     <button id="btnSignIn" onclick="login()">Log In</button>
                 </div>
             </div>
@@ -56,15 +59,18 @@
 
         <transition name="fade">
             <div id="divSignUp" class="divModal">
-                <div id="divSignInForm" class="divModalForm">
+                <div id="divSignUpForm" class="divModalForm">
                     <div class="divModalTitle">Sign Up
                         <span id="spanAlertX" class="spanModalX" onclick = "closeModal()">&times;</span>
                     </div>
+
         
-                    <label id="lblSignInEmployeeID">Username: </label>
+                    <label id="lblSignInEmployeeID">Email: </label>
                     <input type="text" id="txtUsername"/>
                     <label id="lblPassword">Password:</label>
                     <input type="password" id="txtUserPassword"/>
+                    <label id="lblDisplayName">Display Name:</label>
+                    <input type="text" id="txtDisplayName"/>
         
                     <button id="btnSignIn" onclick = "signUp()">Create Account</button>
                 </div>
@@ -74,20 +80,34 @@
         <div id="divAlert" class="divModal">
             <div id="divAlertForm" class="divModalForm">
                 <div class="divModalTitle">
-                    CS390 Time Log
+                    ColorPalette
                     <span id="spanAlertX" class="spanModalX" onclick="closeModal()">&times;</span>
                 </div>
                 <div id="divAlertMessage"><label id = "lblAlertMessage">hello</div>
-            
+
                 <button id="btnAlertOK" onclick="btnOK_onclick()">OK</button>
             </div>
         </div>
 
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>        
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script type = "text/javascript" src = "./func.js"></script>
-        <script type = "text/javascript" src = "/socket.io/socket.io.js"></script>
         <script type = "text/javascript" src = "./chat.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCBY1DZnogGxG4XOxRvRHnigMS4XJ9Q094",
+                authDomain: "colorpalettecs252.firebaseapp.com",
+                databaseURL: "https://colorpalettecs252.firebaseio.com",
+                projectId: "colorpalettecs252",
+                storageBucket: "colorpalettecs252.appspot.com",
+                messagingSenderId: "306554441966"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <!-- <script type = "text/javascript" src = "/socket.io/socket.io.js"></script> -->
     </body>
 </html>
