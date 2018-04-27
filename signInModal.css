@@ -169,6 +169,17 @@ input, button, label {
     transform: translateX(-50%); 
 }
 
+#divAlertForm {
+    position: fixed;
+    width:500px;
+    height:400px;
+    /* display: block; */
+    top:40%;
+    transform: translateY(-50%); 
+    left:50%;
+    transform: translateX(-50%); 
+}
+
 #divAlertMessage {
     position:absolute;
     height:80px;
