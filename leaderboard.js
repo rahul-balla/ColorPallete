@@ -19,6 +19,8 @@ function body_onload(){
 		messagingSenderId: "306554441966"
 	};
 	firebase.initializeApp(config);	
+
+	craeteUserTable();
 }
 
 
@@ -62,13 +64,22 @@ function btnShowGameData_onclick(){
 		preGameData.innerText = JSON.stringify(snap.val(), null, 3);
 		JSONgameData.push(JSON.stringify(snap.val(), null, 3));
 		console.log(JSONgameData);
-
+		
 		console.log();
 	});
 }
 
-function createTable(){
+function craeteUserTable(){
+	var ref = firebase.database().ref().child('users');
 
+  ref.on("child_added", snap => {
+    var username = snap.child("userName").val();
+	var email = snap.child("userEmail").val();
+	console.log("name: " + username);
+	console.log("email: " + email);
+	
+	$("#user_table_body").append("<tr><td>" + username + "</td><td>" + email + "</td><tr>");
+  });
 }
 
 // ranking
