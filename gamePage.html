@@ -11,14 +11,19 @@
             <!-- Sign Out button -->
             <button id = "btnSignOut" onclick = "onSignOut()">Sign Out</button>
         </div>
-
+        
+    
     <div id = "wholeRectangle">
         <div class="rect1"></div>
         <div class="rect2"></div>
         <div class="rect3"></div>
         <div class="rect4"></div>
     </div>
-
+    
+    <pre id = "userData">
+    </pre>
+        <button id="btnShowUserData" onclick="btnShowUserData_onclick()"> Show user data</button>
+    
     <!-- Chat Box -->
     <div id = "chatBox">
         <div id = "navBarChat">
@@ -31,8 +36,11 @@
         <!-- <input id = "handle" type = "text" placeholder="Handle"> -->
         <input id = "message" type = "text" placeholder="Message">
         <button id = "send">Send</button>
+
+
     </div>
 
+    
     <!-- borders drawn to designate the location of chat and leaderboard (delete all these border when page is done) -->
         <div id="verticalBorder"></div>
         <div id="horizontalBorder"></div>

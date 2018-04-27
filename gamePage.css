@@ -134,3 +134,16 @@ input, button, label {
 /* #rect1 {
     animation: argh-my-eyes 2s infinite;
 } */
+
+#gameData{
+    position: absolute;
+    left: 600px;
+    top: 500px;
+}
+
+
+#btnShowUserData{
+    position: absolute;
+    left: 600px;
+    top: 450px;
+}

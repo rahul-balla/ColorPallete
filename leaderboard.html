@@ -12,17 +12,9 @@
 	
 	<h1>Leaderboard</h1>
 
-	<pre id ="object">
+	<pre id = "gameData">
 	</pre>
-
-	<pre id = "playerData">
-	</pre>
-
-	<ul id="list">
-	</ul>
 	
-	<!-- Clock : <clock></clock><br> -->
-
 	<!-- create leaderboard table -->
 	<h2 id = "uName"></h2>
 	<h2 id = "uScore"> </h2>
@@ -34,14 +26,18 @@
 	<label id = "lbl_uName"> uName </label>
 	<input type = "text" id="txt_uName">
 
-	<label id = "lbl_uScore"> uScore </<label>
+	<label id = "lbl_uEmail"> uEmail </label>
+	<input type = "text" id="txt_uEmail">
+
+	<label id = "lbl_uScore"> uScore </label>
 	<input type = "text" id="txt_uScore">
 
-	<label id = "lbl_timeStamp"> TimeStamp </<label>
-	<input type = "text" id="txt_timestamp">
+	<label id = "lbl_timeStamp"> TimeStamp </label>
+	<input type = "text" id="txt_uTimestamp">
 
-	<button id="btnAdd" onclick="btnAdd_onclick()">Storing to Firebase</button>
-
+	<button id="btnAddUser" onclick="btnAddUser_onclick()">Storing user to Firebase</button>
+	<button id="btnAddGameData" onclick="btnAddGameData_onclick()">Storing gamedata to Firebase</button>
+	<button id="btnShowGameData" onclick="btnShowGameData_onclick()"> Show Game data</button>
 	
 
 

@@ -1,18 +1,45 @@
-// $(function () {
-//     var socket = io();
-//     $('form').submit(function(){
-//       socket.emit('chat message', $('#m').val());
-//       $('#m').val('');
-//       return false;
-//     });
-// });
-// var user = 
-
 function body_onload1(){
-  // console.log(globalDisplayName)
+  // firebase.auth().onAuthStateChanged(function(user) {
+  //   if (user) {
+  //     // User is signed in.
+  //   } else {
+  //     // No user is signed in.
+  //   }
+  // });
 
-  var user = firebase.auth().currentUser;
-  console.log(user);
+
+
+  // var user = firebase.auth().currentUser;
+  // console.log(user);
+
+
+  // var ref = firebase.database().ref().child('users');
+
+  // ref.on("value", function(snapshot) {
+  //    console.log(snapshot.val());
+  // }, function (error) {
+  //    console.log("Error: " + error.code);
+  // });
+  
+  // var dbRefUser = firebase.database().ref().child('users');
+  // var dbRefOneUser = dbRefUser.child();
+  // var username = dbRefUser;
+  // console.log(username);
+  
+  // dbRefOneUser.on('child_added', snap => {
+  //   console.log("we are inside");
+  //   console.log(snap.val());
+  //   username = snap.val();
+  //   console.log("username: "+ username);
+  // });
+
+
+  
+  if (user!= null){
+    window.location.href = "/index.html";
+  }
+  else
+  {
   // console.log("user's display name: " + user.displayName);
   var socket = io.connect('http://localhost:8000');
   // var handle = document.getElementById("handle");
@@ -37,11 +64,33 @@ function body_onload1(){
       document.getElementById("message").value = "";
     }
   })
+  
+
 
  socket.on('chat', function(data){
-    output.innerHTML += '<p><strong>' + "user.displayName" + ':</strong> ' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
   });
+  
+  
 } 
+}
+
+function btnShowUserData_onclick(){
+	// Get elements
+	var preGameData = document.getElementById('gameData');
+	
+	// create reference
+	var dbRefUser = firebase.database().ref().child('games');
+
+	// sync object changes
+	dbRefUser.on('value', snap => {
+		preGameData.innerText = JSON.stringify(snap.val(), null, 3);
+		JSONgameData.push(JSON.stringify(snap.val(), null, 3));
+		console.log(JSONgameData);
+	});
+}
+
+
 
 
 function onSignOut () {
@@ -59,4 +108,18 @@ function onSignOut () {
   }).catch(function(error) {
     // An error happened.
   });
+}
+
+
+function btnShowUserData_onclick(){
+	// Get elements
+	var preUserData = document.getElementById('userData');
+	
+	// create reference
+	var dbRefUser = firebase.database().ref().child('users');
+
+	// sync object changes
+	dbRefUser.on('value', snap => {
+		preUserData.innerText = JSON.stringify(snap.val(), null, 3);
+	});
 }
