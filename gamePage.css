@@ -46,6 +46,7 @@ input, button, label {
     background: red;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
+    animation-iteration-count: initial;
     -webkit-animation: argh-my-eyes 2s infinite;
     display: none;
 }
