@@ -377,9 +377,9 @@ input, button, label {
     height: 50px;
     position: absolute;
     background-color: blue;
-    border: none;
-    color: white;
-    font-size: 16px;
+    /* border: none;
+    /* color: white; */
+    /* font-size: 16px; */ 
     
     /* margin: 4px 2px; */
     /* cursor: pointer; */
@@ -394,10 +394,10 @@ input, button, label {
     background-color: red;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 16px; 
     
     /* margin: 4px 2px; */
-    /* cursor: pointer; */
+    /* cursor: pointer;*/
 }
 /* #rect1 {
     animation: argh-my-eyes 2s infinite;
@@ -458,3 +458,15 @@ input, button, label {
     border-radius: 8px;
 }
 
+
+#lblScore {
+    position: absolute;
+    top: 70px;
+    left:330px;
+}
+
+#scoreChange {
+    position: absolute;
+    top: 70px;
+    left: 450px;
+}
