@@ -8,8 +8,10 @@ Comment allowed (Feedback and opnions are always welcome!)
 
 
 JaeYeon (Eric) Kim : kim802@purdue.edu
-Samrat : sam@purdue.edu
-Rahul : 
+
+Samrat : nallas@purdue.edu
+
+Rahul : rballa@purdue.edu
 
  
 # Description of Project:
