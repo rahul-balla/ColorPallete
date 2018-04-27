@@ -40,8 +40,35 @@
 	<button id="btnShowGameData" onclick="btnShowGameData_onclick()"> Show Game data</button>
 	
 
+<div class = "mainDiv" align = "left">
+	<h1> All users</h1>
+	<table>
+		<thead>
+			<td>Name</td>
+			<td>Email</td>
+		</thead>
+		<tbody id="user_table_body">
 
+		</tbody>
+	</table>
+</div>
 
+<div class = "gameDataDiv" align = "left">
+		<h1> All games</h1>
+		<table>
+			<thead>
+				<td>Username</td>
+				<!-- <td>Email</td> -->
+				<td>score</td>
+				<td>timestamp</td>
+			</thead>
+
+			<tbody id="game_table_body">
+
+			</tbody>
+
+		</table>
+	</div>
 
 
 <!-- <div id="container">
@@ -66,6 +93,7 @@
   </div>
 </div> -->
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="https://code.jqeury.com/jquery-3.1.0.js"></script>
 <script language="javascript" type="text/javascript" src="leaderboard.js"></script>
 
 </body>

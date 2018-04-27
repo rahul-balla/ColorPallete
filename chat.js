@@ -1,45 +1,39 @@
 function body_onload1(){
-  // firebase.auth().onAuthStateChanged(function(user) {
-  //   if (user) {
-  //     // User is signed in.
-  //   } else {
-  //     // No user is signed in.
-  //   }
-  // });
-
+  
+  var username;
+  
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      username = user.displayName;
+        console.log(user.displayName)
+    //   window.location.href = "gamePage.html"
+    }
+    else {
+      window.location.href = "index.html"
+    }
+  });
 
 
   // var user = firebase.auth().currentUser;
   // console.log(user);
 
 
-  // var ref = firebase.database().ref().child('users');
-
-  // ref.on("value", function(snapshot) {
-  //    console.log(snapshot.val());
-  // }, function (error) {
-  //    console.log("Error: " + error.code);
-  // });
+  var ref = firebase.database().ref().child('users');
+  var username1;
+  ref.on("child_added", snap => {
+    var username1 = snap.child("userName").val();
+    var email = snap.child("userEmail").val();
+    console.log("name: " + username1);
+    console.log("email: " + email);
+  });
   
-  // var dbRefUser = firebase.database().ref().child('users');
-  // var dbRefOneUser = dbRefUser.child();
-  // var username = dbRefUser;
-  // console.log(username);
-  
-  // dbRefOneUser.on('child_added', snap => {
-  //   console.log("we are inside");
-  //   console.log(snap.val());
-  //   username = snap.val();
-  //   console.log("username: "+ username);
-  // });
-
 
   
-  if (user!= null){
-    window.location.href = "/index.html";
-  }
-  else
-  {
+  // if (user!= null){
+  //   window.location.href = "index.html";
+  // }
+  // else
+  // {
   // console.log("user's display name: " + user.displayName);
   var socket = io.connect('http://localhost:8000');
   // var handle = document.getElementById("handle");
@@ -64,34 +58,27 @@ function body_onload1(){
       document.getElementById("message").value = "";
     }
   })
-  
-
-
  socket.on('chat', function(data){
-    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
+    
+  console.log("want to print username: "  + username1);
+    output.innerHTML += '<p><strong>' + username1 + ':</strong> ' + data.message + '</p>';
   });
-  
-  
 } 
-}
+// }
+
 
 function btnShowUserData_onclick(){
 	// Get elements
-	var preGameData = document.getElementById('gameData');
+	var preUserData = document.getElementById('userData');
 	
 	// create reference
-	var dbRefUser = firebase.database().ref().child('games');
+	var dbRefUser = firebase.database().ref().child('users');
 
 	// sync object changes
 	dbRefUser.on('value', snap => {
-		preGameData.innerText = JSON.stringify(snap.val(), null, 3);
-		JSONgameData.push(JSON.stringify(snap.val(), null, 3));
-		console.log(JSONgameData);
+		preUserData.innerText = JSON.stringify(snap.val(), null, 3);
 	});
 }
-
-
-
 
 
 
@@ -112,16 +99,3 @@ function onSignOut () {
   });
 }
 
-
-function btnShowUserData_onclick(){
-	// Get elements
-	var preUserData = document.getElementById('userData');
-	
-	// create reference
-	var dbRefUser = firebase.database().ref().child('users');
-
-	// sync object changes
-	dbRefUser.on('value', snap => {
-		preUserData.innerText = JSON.stringify(snap.val(), null, 3);
-	});
-}
