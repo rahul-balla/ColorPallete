@@ -63,7 +63,7 @@ function body_onload1(){
 
     
   console.log("want to print username: "  + username);
-    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + username1 + ':</strong> ' + data.message + '</p>';
 
   });
 } 
