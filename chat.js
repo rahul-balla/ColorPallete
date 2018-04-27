@@ -1,11 +1,14 @@
 function body_onload1(){
-
-  
   var username;
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      username = user.displayName;
-        console.log(user.displayName)
+      // var authRef = firebase.database().ref().getAuth();
+      // var authRef = new Firebase("https://colorpalettecs252.firebaseio.com");
+      authDataObj = firebase.auth();
+      // authDataObj = firebase.auth();getAuth();              
+      username = authDataObj.uid;
+      // username = user.displayName;
+      //   console.log(user.displayName)
     //   window.location.href = "gamePage.html"
     }
     else {
@@ -17,12 +20,10 @@ function body_onload1(){
 
   // var user = firebase.auth().currentUser;
   // console.log(user);
-
-
   var ref = firebase.database().ref().child('users');
   var username1;
   ref.on("child_added", snap => {
-    var username1 = snap.child("userName").val();
+    username1 = snap.child("userName").val();
     var email = snap.child("userEmail").val();
     console.log("name: " + username1);
     console.log("email: " + email);
@@ -65,7 +66,7 @@ function body_onload1(){
 
     
   console.log("want to print username: "  + username1);
-    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + username1 + ':</strong> ' + data.message + '</p>';
 
   });
 } 
