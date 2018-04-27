@@ -5,7 +5,7 @@
 var checker = 0
 function play2() {
     console.log("starting game")
-    document.getElementById("rect1").style.display = 'block'
+    document.getElementById("rect1").style.display = 'block';
     // $("#rect2").css({
     //     'display': 'none'
 
@@ -20,48 +20,55 @@ function play2() {
     //     'display': 'none'
 
     // })
-    startGame()
-
+    startGame();
 }
 
-function resetAnimation () {
-    var element = document.getElementById("rect1");
-    var tryAgainButton = document.getElementById("btnTryAgain");
-
-    tryAgainButton.addEventListener('click', function (e) {
-        e.preventDefault
-
-        element.classList.remove("rectangle1");
-        void element.offsetWidth
-        element.classList.add("rectangle1");
-    });
+function displayAlert(message){
+    document.getElementById("lblAlertMessage").innerHTML = message;
+    document.getElementById("divAlert").style.display = "flex";
 }
+
+function closeModal(){
+    document.getElementById("divAlert").style.display = "none";
+}
+
+function closeModalBig(){
+    document.getElementById("divAlertBig").style.display = "none";
+}
+
+function btnOK_onclick(){
+    document.getElementById("divAlert").style.display = "none";
+}
+function btnOKBig_onclick(){
+    document.getElementById("divAlertBig").style.display = "none";
+}
+// function resetAnimation () {
+//     var element = document.getElementById("rect1");
+//     var tryAgainButton = document.getElementById("btnTryAgain");
+
+//     tryAgainButton.addEventListener('click', function (e) {
+//         e.preventDefault
+
+//         element.classList.remove("rectangle1");
+//         void element.offsetWidth
+//         element.classList.add("rectangle1");
+//     });
+// }
 
 function reloadPlay(){
-    // checker = 1
     window.location.reload();
-    // document.getElementById("rect1").style.display = 'block'
-    // console.log("reloading")
-    // $("#rect1").css({
-    //     '-webkit-animation-play-state': 'running'
-
-    // })
-    // startGame()
 }
 
 function play3() {
     console.log("starting game2")
-
-
-
     $("#rect1").css({
         '-webkit-animation-play-state': 'running'
 
     })
 
-    document.getElementById("rect2").style.display = 'none'
-    document.getElementById("rect3").style.display = 'none'
-    document.getElementById("rect4").style.display = 'none'
+    document.getElementById("rect2").style.display = 'none';
+    document.getElementById("rect3").style.display = 'none';
+    document.getElementById("rect4").style.display = 'none';
 
     // console.log("yo")
     //     $("#rect2").css({
@@ -78,9 +85,9 @@ function play3() {
     //     'display': 'none'
 
     // })
-    startGame()
-    resetAnimation()
-    console.log("yooooo")
+    startGame();
+    // resetAnimation()
+    console.log("yooooo");
 }
 
 
@@ -91,21 +98,22 @@ if (checker == 1) {
 function tutorial() {
     console.log("tutorial")
     var message = ""
-    message += "Welcome fellow gamer! The instructions are simple!\n\n"
-    message += "All you need for this game is timing and the spacebar.\n\n"
-    message += "--> The objective of the game is to make all the squares be of the same color."
-    message += "--> At the beginning of the game the first squaree will keep changing colors until you press the spacebar.\n"
-    message += "--> Pressing the spacebar will make the square the color that the square was when the spacebar was pressed.\n"
-    message += "--> Now that the first square is of a particular color you must make the rest of the square have the same color by timing the spacebar correctly to match the right color.\n"
-    message += "--> You might think this is pretty easy but trust me it isn’t. As you progress past more square the rate at which the colors change will speed up.\n"
-    message += "--> In fact, there will also be a time when the colors change randomly.\n\n"
+    message += "Welcome fellow gamer! The instructions are simple!" + '<BR><BR>'
+    message += "All you need for this game is timing and the spacebar.<BR><BR>"
+    message += "--> The objective of the game is to make all the squares be of the same color.<BR>"
+    message += "--> At the beginning of the game the first squaree will keep changing colors until you press the spacebar.<BR>"
+    message += "--> Pressing the spacebar will make the square the color that the square was when the spacebar was pressed.<BR>"
+    message += "--> Now that the first square is of a particular color you must make the rest of the square have the same color by timing the spacebar correctly to match the right color.<BR>"
+    message += "--> You might think this is pretty easy but trust me it isn’t. As you progress past more square the rate at which the colors change will speed up.<BR>"
+    message += "--> In fact, there will also be a time when the colors change randomly.<BR><BR>"
     message += "Now that you’ve gotten to know everything get to work and color them rectangles! Good luck! May the odds be in your favor."
 
     displayTutorial(message);
+}
 
 function displayTutorial(message){
-    document.getElementById("lblAlertMessage").innerHTML = message;
-    document.getElementById("divAlert").style.display = "flex";
+    document.getElementById("lblAlertMessageBig").innerHTML = message;
+    document.getElementById("divAlertBig").style.display = "block";
 }
 
 function startGame() {
@@ -127,6 +135,7 @@ function startGame() {
                 })
 
                 color = $("#rect1").css("background-color")
+                // document.getElementById("scoreChange").innerHTML = counter;
 
                 // console.timeEnd()
                 $("#rect2").css({
@@ -153,6 +162,7 @@ function startGame() {
                 counter++;
             } else {
                 displayAlert("Is that all you've got? You can do better than that");
+                document.getElementById("scoreChange").innerHTML = counter;
                 // document.getElementById("btnPlay").innerHTML = "Play again"
                 if (!(spaceCheck >= 1)) {
                 end = window.performance.now()
@@ -165,6 +175,7 @@ function startGame() {
             }
             }
             else if (counter === 2) {
+                document.getElementById("scoreChange").innerHTML = counter;
                 $("#rect3").css({
                     '-webkit-animation-play-state': 'paused'
                 })
@@ -181,7 +192,7 @@ function startGame() {
             } else {
                 displayAlert("You're better than that");
                 if (!(spaceCheck >= 1)) {
-
+                    document.getElementById("scoreChange").innerHTML = counter;
                     // document.getElementById("btnPlay").innerHTML = "Play again"
                     end = window.performance.now()
                     end -= start
@@ -214,6 +225,7 @@ function startGame() {
                 } else {
                 if (!(spaceCheck >= 1)) {
                     displayAlert("Is that all you've got?");
+                    document.getElementById("scoreChange").innerHTML = counter;
                     end = window.performance.now()
                     end -= start
                     end /= 1000
@@ -239,6 +251,7 @@ function startGame() {
                 } else {
                     if (!(spaceCheck >= 1)) {
                         displayAlert("You're getting there!");
+                        document.getElementById("scoreChange").innerHTML = counter;
                         end = window.performance.now()
                         end -= start
                         end /= 1000
@@ -263,6 +276,7 @@ function startGame() {
                     console.log("block 6 paused");
                     counter++;
                 } else {
+                    document.getElementById("scoreChange").innerHTML = counter;
                     displayAlert("You got pretty far! Try again");
 
                     if (!(spaceCheck >= 1)) {
@@ -291,9 +305,11 @@ function startGame() {
                     console.log("block 7 paused");
                     counter++;
                 } else {
+                    document.getElementById("scoreChange").innerHTML = counter;
                     displayAlert("You were so close! Try again");
 
                     if (!(spaceCheck >= 1)) {
+                        
                         // document.getElementById("btnPlay").innerHTML = "Play again"
                         end = window.performance.now()
                         end -= start
@@ -318,6 +334,7 @@ function startGame() {
                     console.log("block 8 paused");
                     counter++;
                 } else {
+                    document.getElementById("scoreChange").innerHTML = counter;
                     displayAlert("You were so close! Try again");
                     if (!(spaceCheck >= 1)) {
                         // document.getElementById("btnPlay").innerHTML = "Play again"
@@ -337,6 +354,8 @@ function startGame() {
                 var color9 = $("#rect9").css("background-color")
 
                 if (color == color9) {
+                    counter++;
+                    document.getElementById("scoreChange").innerHTML = counter;
                     console.log("you won")
                 } else {
                     displayAlert("You were so close! Try again");
@@ -359,4 +378,3 @@ function startGame() {
 //     document.getElementById("btnPlay").addEventListener("click", myFunc)
 
 // function myFunc() {
-}

@@ -1,6 +1,4 @@
 function body_onload1(){
-
-  
   var username;
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {

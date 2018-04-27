@@ -31,6 +31,7 @@ function closeModal(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
     document.getElementById("divAlert").style.display = "none";
+    document.getElementById("divAlertForm").style.display = "none";
 }
 
 function displayAlert(message){

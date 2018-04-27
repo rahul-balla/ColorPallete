@@ -52,7 +52,7 @@ input, button, label {
     border: 0px;
 }
 
-#created by{
+.bottomLeft{
     position: absolute;
-    top: 100%;
+    top: 85%;
 }
