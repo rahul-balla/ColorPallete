@@ -9,26 +9,27 @@
 </head>
 
 <body onload="body_onload()">
-
+	
 	<h1>Leaderboard</h1>
 
 	<pre id ="object">
-
 	</pre>
 
 	<pre id = "playerData">
-
 	</pre>
 
-	<ul id='list'>
-		
+	<ul id="list">
 	</ul>
+	
+	<!-- Clock : <clock></clock><br> -->
 
 	<!-- create leaderboard table -->
-	<h2 id = "uName" </h2>
-	<h2 id = "uScore" </h2>
-	<h2 id = "timestamp" </h2>
-
+	<h2 id = "uName"></h2>
+	<h2 id = "uScore"> </h2>
+	<h2 id = "timestamp"></h2>
+	<p id = "curTime"></p>
+	<button onclick="document.getElementById('curTime').innerHTML=Date()">The time is?</button>	<br>
+	
 	<!-- user input -->
 	<label id = "lbl_uName"> uName </label>
 	<input type = "text" id="txt_uName">
@@ -36,11 +37,12 @@
 	<label id = "lbl_uScore"> uScore </<label>
 	<input type = "text" id="txt_uScore">
 
-	<label id = "labl_timeStamp"> TimeStamp </<label>
+	<label id = "lbl_timeStamp"> TimeStamp </<label>
 	<input type = "text" id="txt_timestamp">
 
 	<button id="btnAdd" onclick="btnAdd_onclick()">Storing to Firebase</button>
 
+	
 
 
 

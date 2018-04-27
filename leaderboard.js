@@ -17,21 +17,34 @@
 	// var dbRef = firebase.database().ref().child('text');
 	// dbRef.on('value', snap => bigOne.innerText = snap.val());
 
+	var JSONplayerData = [];
+	// var c = document.querySelector('clock');
+
+	// var pad = function(x){
+	// 	return x < 10 ? '0'+x : x;
+	// }
+
+	// var ShowClock = function(){
+	// 	var d = new Date();
+	// 	var h = pad(d.getHours);
+	// 	var m = pad(d.getMinutes);
+	// 	var s = pad(d.getSeconds);
+	// 	c.innerHTML = [h, m, s].join(':');
+	// }
+	// setInterval(ShowClock, 1000);
+	
+
 	// Get elements
 	var preObject = document.getElementById('object');
 	var hobbyList = document.getElementById('list');
 	
 	var prePlayerData = document.getElementById('playerData');
 	
-
 	// create reference
 	var dbRefObject = firebase.database().ref().child('object');
 	var dbRefHobbyList = dbRefObject.child('hobby');
 
 	var dbRefPlayer = firebase.database().ref().child('playerData');
-	
-	
-	
 	
 	// sync object changes
 	// dbRefObject.on('value', snap => console.log(snap.val()));
@@ -41,8 +54,11 @@
 
 	dbRefPlayer.on('value', snap => {
 		prePlayerData.innerText = JSON.stringify(snap.val(), null, 3);
+		JSONplayerData.push(JSON.stringify(snap.val(), null, 3));
+		console.log(JSONplayerData);
 	});
 	
+
 
 	// sync list changes
 	dbRefHobbyList.on('child_added', snap => console.log(snap.val()));
