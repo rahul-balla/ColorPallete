@@ -101,7 +101,11 @@ function tutorial() {
     message += "--> In fact, there will also be a time when the colors change randomly.\n\n"
     message += "Now that you’ve gotten to know everything get to work and color them rectangles! Good luck! May the odds be in your favor."
 
-    displayAlert(message);
+    displayTutorial(message);
+
+function displayTutorial(message){
+    document.getElementById("lblAlertMessage").innerHTML = message;
+    document.getElementById("divAlert").style.display = "flex";
 }
 
 function startGame() {
@@ -355,5 +359,4 @@ function startGame() {
 //     document.getElementById("btnPlay").addEventListener("click", myFunc)
 
 // function myFunc() {
-
-// }
+}
