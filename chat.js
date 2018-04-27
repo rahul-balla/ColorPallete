@@ -93,6 +93,8 @@ function btnShowUserData_onclick(){
 
 
 
+
+
 function onSignOut () {
   console.log("in logout function")
   firebase.auth().signOut().then(function() {
