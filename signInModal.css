@@ -174,7 +174,7 @@ input, button, label {
     width:650px;
     height:400px;
     /* display: block; */
-    top:20%;
+    top:8%;
     transform: translateY(-50%); 
     left:50%;
     transform: translateX(-50%); 
