@@ -1,72 +1,8 @@
-/*
-body {
-    background:#e6f1f8;
-}
-*/
-
-
-/* #lbl_uName {
-	position: absolute;
-	left : 10px;
-	top : 10px;
-	width : 100px;
-	height : 30px;
-	font-family: sans-serif;
-	font-size: 20px;
+body{
+	background-color: skyblue;
 }
 
-#lbl_uScore {
-	position: absolute;
-	left : 10px;
-	top : 50px;
-	width : 100px;
-	height : 30px;
-	font-family: sans-serif;
-	font-size: 20px;
-}
-
-#labl_timeStamp {
-	position: absolute;
-	left : 10px;
-	top : 90px;
-	width : 100px;
-	height : 30px;
-	font-family: sans-serif;
-	font-size: 20px;
-}
-
-#txt_uName {
-	position: absolute;
-	left : 150px;
-	top : 10px;
-	width : 100px;
-	height : 30px;
-	font-family: sans-serif;
-	font-size: 20px;
-}
-
-#txt_uScore {
-	position: absolute;
-	left : 150px;
-	top : 50px;
-	width : 100px;
-	height : 30px;
-	font-family: sans-serif;
-	font-size: 20px;
-}
-#txt_timestamp {
-position: absolute;
-left : 150px;
-top : 90px;
-width : 100px;
-height : 30px;
-font-family: sans-serif;
-font-size: 20px;
-} */
-
-
-
-#container {
+/* #container {
 	width: 600px;
 	height: auto;
 }
@@ -90,4 +26,4 @@ font-size: 20px;
 	position: relative;
 	display: inline-block;
 	width: 25%;
-}
+} */

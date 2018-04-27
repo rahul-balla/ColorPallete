@@ -1,15 +1,15 @@
 
-var globalDisplayName;
-
 function body_onload(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
     document.getElementById("divAlert").style.display = "none";
     // document.getElementsByClassName("divModal").style.display = "none";
 
+    // var user = firebase.auth().currentUser;
+    // console.log("user is: " + user);
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          window.location.href = "game.html"
+          window.location.href = "gamePage.html"
         }
     });
 }
@@ -53,7 +53,7 @@ function login(){
         displayAlert("Authentication successful")
     })
     .then(function (){
-        window.location.href = "game.html"
+        window.location.href = "gamePage.html"
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -65,7 +65,7 @@ function login(){
 }
 
 function playButton(){
-    window.location.href = "./game.html"
+    window.location.href = "./gamePage.html"
 }
 
 function signUp(){
@@ -92,7 +92,7 @@ function signUp(){
                 console.log(success.displayName);
             })
             .then(function () {
-                window.location.href = "./game.html"
+                window.location.href = "./gamePage.html"
             })
             .catch(function (error){
                 displayAlert(error.message)
