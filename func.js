@@ -31,6 +31,7 @@ function closeModal(){
     document.getElementById("divSignIn").style.display = "none";
     document.getElementById("divSignUp").style.display = "none";
     document.getElementById("divAlert").style.display = "none";
+    document.getElementById("divAlertForm").style.display = "none";
 }
 
 function displayAlert(message){
@@ -66,7 +67,16 @@ function login(){
 }
 
 function playButton(){
-    window.location.href = "./gamePage.html"
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            console.log(user.displayName)
+        //   window.location.href = "gamePage.html"
+        }
+        else {
+            document.getElementById("divSignUp").style.display = "flex";
+        }
+    });
+    
 }
 
 function signUp(){
