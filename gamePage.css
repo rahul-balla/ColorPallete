@@ -27,6 +27,16 @@ input, button, label {
     transform: translateY(-50%); 
 }
 
+#btnTutorial{
+    color: white;
+    position: relative;
+    left: 78%;
+    background: black;
+    border: 0 solid black;
+    top:50%;
+    transform: translateY(-50%); 
+}
+
 #btnSignOut:hover {
     color: red;
 }

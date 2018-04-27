@@ -88,6 +88,22 @@ if (checker == 1) {
     startGame()
 }
 
+function tutorial() {
+    console.log("tutorial")
+    var message = ""
+    message += "Welcome fellow gamer! The instructions are simple!\n\n"
+    message += "All you need for this game is timing and the spacebar.\n\n"
+    message += "--> The objective of the game is to make all the rectangles be of the same color."
+    message += "--> At the beginning of the game the first rectangle will keep changing colors until you press the spacebar.\n"
+    message += "--> Pressing the spacebar will make the rectangle the color that the rectangle was when the spacebar was pressed.\n"
+    message += "--> Now that the first rectangle is of a particular color you must make the rest of the rectangles have the same color by timing the spacebar correctly to match the right color.\n"
+    message += "--> You might think this is pretty easy but trust me it isn’t. As you progress past more rectangles the rate at which the colors change will speed up.\n"
+    message += "--> In fact, there will also be a time when the colors change randomly.\n\n"
+    message += "Now that you’ve gotten to know everything get to work and color them rectangles! Good luck! May the odds be in your favor."
+
+    displayAlert(message);
+}
+
 function startGame() {
     console.log("why you no work?")
 

@@ -44,6 +44,8 @@ function body_onload1(){
 } 
 
 
+
+
 function onSignOut () {
   console.log("in logout function")
   firebase.auth().signOut().then(function() {
