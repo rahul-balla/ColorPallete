@@ -67,7 +67,16 @@ function login(){
 }
 
 function playButton(){
-    window.location.href = "./gamePage.html"
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            console.log(user.displayName)
+        //   window.location.href = "gamePage.html"
+        }
+        else {
+            document.getElementById("divSignUp").style.display = "flex";
+        }
+    });
+    
 }
 
 function signUp(){
