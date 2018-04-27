@@ -1,6 +1,15 @@
 // reference : leaderboard.html
-(function(){
-// Initialize Firebase
+var userName = document.getElementById("txt_uName");
+var uEmail = document.getElementById("txt_uEmail");
+var uScore = document.getElementById("txt_uScore");
+var uTimestamp = document.getElementById("txt_uTimestamp");
+var addBtn = document.getElementById("btnAdd");
+var JSONgameData = [];
+
+var firebaseRef = firebase.database().ref();
+
+function body_onload(){
+	// Initialize Firebase
 	var config = {
 		apiKey: "AIzaSyCBY1DZnogGxG4XOxRvRHnigMS4XJ9Q094",
 		authDomain: "colorpalettecs252.firebaseapp.com",
@@ -9,112 +18,68 @@
 		storageBucket: "colorpalettecs252.appspot.com",
 		messagingSenderId: "306554441966"
 	};
-	firebase.initializeApp(config);
+	firebase.initializeApp(config);	
 
-	// Get a reference to the database service
-	// var database = firebase.database();
-	// var bigOne = document.getElementById('bigOne');
-	// var dbRef = firebase.database().ref().child('text');
-	// dbRef.on('value', snap => bigOne.innerText = snap.val());
+	craeteUserTable();
+}
 
-	var JSONplayerData = [];
-	// var c = document.querySelector('clock');
 
-	// var pad = function(x){
-	// 	return x < 10 ? '0'+x : x;
-	// }
+function btnAddUser_onclick(){
+	window.alert("saving user to firebase db");
 
-	// var ShowClock = function(){
-	// 	var d = new Date();
-	// 	var h = pad(d.getHours);
-	// 	var m = pad(d.getMinutes);
-	// 	var s = pad(d.getSeconds);
-	// 	c.innerHTML = [h, m, s].join(':');
-	// }
-	// setInterval(ShowClock, 1000);
+	var uNameTxt = userName.value; 
+	var uEmailTxt = uEmail.value;
 	
+	var usersRef = firebase.database().ref().child("users");
+	usersRef.push({
+		userName: uNameTxt,
+		userEmail: uEmailTxt
+	})
+}
 
+function btnAddGameData_onclick(){
+	window.alert("saving game data");
+
+	var uNameTxt = userName.value;
+	var uScoreTxt = uScore.value;
+	var uTimestampTxt = uTimestamp.value;
+
+	var gamesRef = firebase.database().ref().child("games");
+	gamesRef.push({
+		username: uNameTxt,
+		score: uScoreTxt,
+		timeStamp: uTimestampTxt
+	})
+}
+
+function btnShowGameData_onclick(){
 	// Get elements
-	var preObject = document.getElementById('object');
-	var hobbyList = document.getElementById('list');
-	
-	var prePlayerData = document.getElementById('playerData');
+	var preGameData = document.getElementById('gameData');
 	
 	// create reference
-	var dbRefObject = firebase.database().ref().child('object');
-	var dbRefHobbyList = dbRefObject.child('hobby');
+	var dbRefUser = firebase.database().ref().child('games');
 
-	var dbRefPlayer = firebase.database().ref().child('playerData');
-	
 	// sync object changes
-	// dbRefObject.on('value', snap => console.log(snap.val()));
-	dbRefObject.on('value', snap => {
-		preObject.innerText = JSON.stringify(snap.val(), null, 3);
+	dbRefUser.on('value', snap => {
+		preGameData.innerText = JSON.stringify(snap.val(), null, 3);
+		JSONgameData.push(JSON.stringify(snap.val(), null, 3));
+		console.log(JSONgameData);
+		
+		console.log();
 	});
+}
 
-	dbRefPlayer.on('value', snap => {
-		prePlayerData.innerText = JSON.stringify(snap.val(), null, 3);
-		JSONplayerData.push(JSON.stringify(snap.val(), null, 3));
-		console.log(JSONplayerData);
-	});
+function craeteUserTable(){
+	var ref = firebase.database().ref().child('users');
+
+  ref.on("child_added", snap => {
+    var username = snap.child("userName").val();
+	var email = snap.child("userEmail").val();
+	console.log("name: " + username);
+	console.log("email: " + email);
 	
-
-
-	// sync list changes
-	dbRefHobbyList.on('child_added', snap => console.log(snap.val()));
-	dbRefHobbyList.on('child_added', snap => {
-		var li = document.createElement('li');
-		li.innerText = snap.val();
-		li.id = snap.key;
-		hobbyList.appendChild(li);
-	});
-
-	// sync changing
-	dbRefHobbyList.on('child_changed', snap=> {
-		var liChanged = document.getElementById(snap.key);
-		liChanged.innerText = snap.val();
-	})
-	
-	// sync removing
-	dbRefHobbyList.on('child_removed', snap =>{
-		var liRemove = document.getElementById(snap.key);
-		liRemove.remove();
-	})
-
-}());
-
-function body_onload(){
-	btnAdd.onclick = btnAdd_onclick;
-	uName.value = "123";
-	uScore.value = "456";
-}
-
-
-function btnAdd_onclick(){
-	// store it to firebase
-
-	var user = document.getElementById("txt_uName").value;
-	var score = document.getElementById("txt_uScore").value;
-	console.log("uNmae: " + user);
-	console.log("uScore: " + score);
-
-}
-
-
-function addUser(uName){
-	var database = firebase.database()
-	var uNameRef = database.ref()
-
-	uNameRef.push().key
-}
-
-//getters
-function getPlayerScore(){
-
-}
-
-function displayPlayerScore(){
-
+	$("#user_table_body").append("<tr><td>" + username + "</td><td>" + email + "</td><tr>");
+  });
 }
 
 // ranking
