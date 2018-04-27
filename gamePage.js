@@ -129,6 +129,7 @@ function startGame() {
         if (e.keyCode == 32) {
             console.log("listened to spacebar")
             if (counter === 0) {
+
                 $("#rect1").css({
                     '-webkit-animation-play-state': 'paused'
 
@@ -146,10 +147,12 @@ function startGame() {
                 console.log("counter: " + counter);
             }
             else if (counter === 1) {
+                // document.getElementById("scoreChange").innerHTML = counter;
                 $("#rect2").css({
                     '-webkit-animation-play-state': 'paused'
                 })
 
+                
                 var color2 = $("#rect2").css("background-color")
 
                 if (color == color2) {
@@ -160,9 +163,11 @@ function startGame() {
                 })
                 console.log("block 2 paused");
                 counter++;
+                console.log("counter: " + counter);
             } else {
+                document.getElementById("scoreChange").innerHTML = counter
                 displayAlert("Is that all you've got? You can do better than that");
-                document.getElementById("scoreChange").innerHTML = counter;
+
                 // document.getElementById("btnPlay").innerHTML = "Play again"
                 if (!(spaceCheck >= 1)) {
                 end = window.performance.now()
@@ -175,11 +180,15 @@ function startGame() {
             }
             }
             else if (counter === 2) {
-                document.getElementById("scoreChange").innerHTML = counter;
+                // document.getElementById("scoreChange").innerHTML = counter;
                 $("#rect3").css({
                     '-webkit-animation-play-state': 'paused'
                 })
 
+ 
+                
+                var score = document.getElementById("scoreChange").innerHTML
+                console.log("score: " + score)
                 var color3 = $("#rect3").css("background-color")
 
                 if (color == color3) {
@@ -189,7 +198,9 @@ function startGame() {
                 })
                 console.log("block 3 paused");
                 counter++;
+                console.log("counter: " + counter);
             } else {
+                document.getElementById("scoreChange").innerHTML = 3
                 displayAlert("You're better than that");
                 if (!(spaceCheck >= 1)) {
                     document.getElementById("scoreChange").innerHTML = counter;
@@ -222,10 +233,11 @@ function startGame() {
                     })
                     console.log("block 4 paused");
                     counter++;
+                    console.log("counter: " + counter);
                 } else {
                 if (!(spaceCheck >= 1)) {
                     displayAlert("Is that all you've got?");
-                    document.getElementById("scoreChange").innerHTML = counter;
+                    document.getElementById("scoreChange").innerHTML = 4;
                     end = window.performance.now()
                     end -= start
                     end /= 1000
@@ -248,10 +260,11 @@ function startGame() {
                     })
                     console.log("block 5 paused");
                     counter++;
+                    console.log("counter: " + counter);
                 } else {
                     if (!(spaceCheck >= 1)) {
                         displayAlert("You're getting there!");
-                        document.getElementById("scoreChange").innerHTML = counter;
+                        document.getElementById("scoreChange").innerHTML = counter
                         end = window.performance.now()
                         end -= start
                         end /= 1000
@@ -357,6 +370,7 @@ function startGame() {
                     counter++;
                     document.getElementById("scoreChange").innerHTML = counter;
                     console.log("you won")
+                    displayAlert("Congratulations! You won!!");
                 } else {
                     displayAlert("You were so close! Try again");
                     if (!(spaceCheck >= 1)) {
