@@ -416,6 +416,11 @@ input, button, label {
     left: 600px;
     top: 450px;
 }
+#btnCreateGameTable{
+    position: absolute;
+    left: 900px;
+    top: 450px;
+}
 
 .btn3d {
     transition:all .08s linear;
