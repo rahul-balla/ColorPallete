@@ -34,7 +34,7 @@ input, button, label {
 #wholeRectangle{
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 12%;
     width: 450px;
     height: 450px;
     border: 3px solid black;
@@ -60,7 +60,7 @@ input, button, label {
     background: red;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: colorChanger 2s infinite;
+    -webkit-animation: colorChanger2 2s infinite;
     border-left: 3px solid black;
     display: none;
 }
@@ -74,7 +74,7 @@ input, button, label {
     border-bottom: 3px solid black;
     border-left: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: colorChanger 1.8s infinite;
+    -webkit-animation: colorChanger3 1.8s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -88,7 +88,7 @@ input, button, label {
     border-bottom: 3px solid black;
     border-top: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: colorChanger 1.6s infinite;
+    -webkit-animation: colorChanger4 1.6s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -104,7 +104,7 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: colorChanger 1.4s infinite;
+    -webkit-animation: colorChanger5 1.4s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -121,7 +121,7 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: colorChanger 1.2s infinite;
+    -webkit-animation: colorChanger6 1.2s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -135,7 +135,7 @@ input, button, label {
     border-bottom: 3px solid black;
     border-top: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: colorChanger 1s infinite;
+    -webkit-animation: colorChanger7 1s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -151,7 +151,7 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: colorChanger 0.8s infinite;
+    -webkit-animation: colorChanger8 0.8s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -167,7 +167,7 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: colorChanger 0.5s infinite;
+    -webkit-animation: colorChanger9 0.5s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -196,6 +196,159 @@ input, button, label {
     80.6%{ background-color: red}
     100% { background-color: red}
 } 
+
+@keyframes colorChanger2 {
+    0% { background-color: blue}
+    20.5% { background-color: blue}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6%{ background-color: yellow}
+    60.5% { background-color: yellow}
+
+    60.6%{ background-color: green}
+    80.5% { background-color: green}
+
+    80.6%{ background-color: red}
+    100% { background-color: red}
+} 
+
+@keyframes colorChanger3 {
+    0% { background-color: yellow}
+    20.5% { background-color: yellow}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6% { background-color: blue}
+    60.5% { background-color: blue}
+
+    60.6%{ background-color: green}
+    80.5% { background-color: green}
+
+    80.6%{ background-color: red}
+    100% { background-color: red}
+} 
+
+@keyframes colorChanger4 {
+    0% { background-color: yellow}
+    20.5% { background-color: yellow}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6% { background-color: red}
+    60.5% { background-color: red}
+
+    60.6%{ background-color: green}
+    80.5% { background-color: green}
+
+    80.6%{ background-color: blue}
+    100% { background-color: blue}
+} 
+
+@keyframes colorChanger5 {
+    0% { background-color: yellow}
+    20.5% { background-color: yellow}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6% { background-color: green}
+    60.5% { background-color:green}
+
+    60.6%{ background-color: red}
+    80.5% { background-color:red}
+
+    80.6%{ background-color: blue}
+    100% { background-color: blue}
+} 
+
+@keyframes colorChanger6 {
+    0% { background-color: red}
+    20.5% { background-color: red}
+
+    20.6% { background-color: blue}
+    40.5% { background-color: blue}
+
+    40.6% { background-color: green}
+    60.5% { background-color:green}
+
+    60.6%{ background-color: yellow}
+    80.5% { background-color:yellow}
+
+    80.6%{ background-color: orange}
+    100% { background-color: orange}
+} 
+
+@keyframes colorChanger7 {
+    0% { background-color: red}
+    20.5% { background-color: red}
+
+    20.6% { background-color: yellow}
+    40.5% { background-color: yellow}
+
+
+    40.6% { background-color: green}
+    60.5% { background-color:green}
+
+    60.6%{ background-color: orange}
+    80.5% { background-color:orange}
+
+    80.6%{ background-color: blue}
+    100% { background-color: blue}
+}
+
+@keyframes colorChanger8 {
+    0% { background-color: red}
+    16.6% { background-color: red}
+
+    16.7% { background-color: purple}
+    32.2% { background-color: purple}
+
+    32.3% { background-color: green}
+    48.9% { background-color: green}
+
+    49% { background-color: yellow}
+    65.6% { background-color:yellow}
+
+    65.7%{ background-color: blue}
+    82.3% { background-color:blue}
+
+    82.4%{ background-color: orange}
+    100% { background-color: orange}
+}
+
+@keyframes colorChanger9 {
+    0% { background-color:pink}
+    12.5% { background-color: pink}
+
+    12.6% { background-color: brown}
+    25% { background-color: brown}
+
+    25.1% { background-color:magenta}
+    37.5% { background-color: magenta}
+
+    37.6% { background-color:grey}
+    50% { background-color:grey}
+
+    50.1%{ background-color: indigo}
+    62.5% { background-color:indigo}
+
+    62.6%{ background-color: red}
+    75% { background-color: red}
+    
+    75.1%{ background-color: yellow}
+    87.5% { background-color: yellow}
+
+    87.6%{ background-color: orange}
+    100% { background-color: orange}
+}
+
+
+
+
 
 #verticalBorder {
     position: absolute;
