@@ -13,15 +13,6 @@ Samrat : nallas@purdue.edu
 
 Rahul : rballa@purdue.edu
 
- 
-# Description of Project:
-description goes here
 
 # Technologies used:
-HTML5, CSS, Javascript
-Firebase
-Heroku
-Words API
-NPM, Express, ScrollMagic, TweenMax
-
-# DEMO video
+HTML5, CSS, Javascript, Firebase, Express
