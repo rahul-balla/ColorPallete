@@ -12,17 +12,9 @@
 	
 	<h1>Leaderboard</h1>
 
-	<pre id ="object">
+	<pre id = "gameData">
 	</pre>
-
-	<pre id = "playerData">
-	</pre>
-
-	<ul id="list">
-	</ul>
 	
-	<!-- Clock : <clock></clock><br> -->
-
 	<!-- create leaderboard table -->
 	<h2 id = "uName"></h2>
 	<h2 id = "uScore"> </h2>
@@ -34,18 +26,49 @@
 	<label id = "lbl_uName"> uName </label>
 	<input type = "text" id="txt_uName">
 
-	<label id = "lbl_uScore"> uScore </<label>
+	<label id = "lbl_uEmail"> uEmail </label>
+	<input type = "text" id="txt_uEmail">
+
+	<label id = "lbl_uScore"> uScore </label>
 	<input type = "text" id="txt_uScore">
 
-	<label id = "lbl_timeStamp"> TimeStamp </<label>
-	<input type = "text" id="txt_timestamp">
+	<label id = "lbl_timeStamp"> TimeStamp </label>
+	<input type = "text" id="txt_uTimestamp">
 
-	<button id="btnAdd" onclick="btnAdd_onclick()">Storing to Firebase</button>
-
+	<button id="btnAddUser" onclick="btnAddUser_onclick()">Storing user to Firebase</button>
+	<button id="btnAddGameData" onclick="btnAddGameData_onclick()">Storing gamedata to Firebase</button>
+	<button id="btnShowGameData" onclick="btnShowGameData_onclick()"> Show Game data</button>
 	
 
+<div class = "mainDiv" align = "left">
+	<h1> All users</h1>
+	<table>
+		<thead>
+			<td>Name</td>
+			<td>Email</td>
+		</thead>
+		<tbody id="user_table_body">
 
+		</tbody>
+	</table>
+</div>
 
+<div class = "gameDataDiv" align = "left">
+		<h1> All games</h1>
+		<table>
+			<thead>
+				<td>Username</td>
+				<!-- <td>Email</td> -->
+				<td>score</td>
+				<td>timestamp</td>
+			</thead>
+
+			<tbody id="game_table_body">
+
+			</tbody>
+
+		</table>
+	</div>
 
 
 <!-- <div id="container">
@@ -70,6 +93,7 @@
   </div>
 </div> -->
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="https://code.jqeury.com/jquery-3.1.0.js"></script>
 <script language="javascript" type="text/javascript" src="leaderboard.js"></script>
 
 </body>

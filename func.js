@@ -104,5 +104,13 @@ function signUp(){
         displayAlert(error.message);
         // ...
         });
+
+        // storing to firebase database
+        console.log("Save to firebase db");
+        var usersRef = firebase.database().ref().child("users");
+        usersRef.push({
+            userName: displayNameUser,
+            userEmail: user
+        })
     }
 }

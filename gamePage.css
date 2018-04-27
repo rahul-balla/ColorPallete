@@ -27,6 +27,16 @@ input, button, label {
     transform: translateY(-50%); 
 }
 
+#btnTutorial{
+    color: white;
+    position: relative;
+    left: 78%;
+    background: black;
+    border: 0 solid black;
+    top:50%;
+    transform: translateY(-50%); 
+}
+
 #btnSignOut:hover {
     color: red;
 }
@@ -34,9 +44,9 @@ input, button, label {
 #wholeRectangle{
     position: absolute;
     top: 20%;
-    left: 20%;
-    width: 300px;
-    height: 300px;
+    left: 12%;
+    width: 450px;
+    height: 450px;
     border: 3px solid black;
 }
 
@@ -48,24 +58,38 @@ input, button, label {
     border-bottom: 3px solid black;
     border-right: 3px solid black;
     animation-iteration-count: initial;
-    -webkit-animation: argh-my-eyes 2s infinite;
+    -webkit-animation: colorChanger 3s infinite;
     display: none;
 }
 
 #rect2 {
     position: absolute;
     left:150px;
-    width: 147px;
+    width: 150px;
     height: 150px;
     background: red;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: argh-my-eyes 1.5s infinite;
+    -webkit-animation: colorChanger2 2s infinite;
     border-left: 3px solid black;
     display: none;
 }
 
 #rect3 {
+    position: absolute;
+    left: 300px;
+    width: 147px;
+    height: 150px;
+    background: red;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    -webkit-animation: colorChanger3 1.8s infinite;
+    /* border-left: 3px solid black; */
+    display: none;
+}
+
+#rect4 {
     position: absolute;
     top: 150px;
     width: 150px;
@@ -74,12 +98,12 @@ input, button, label {
     border-bottom: 3px solid black;
     border-top: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: argh-my-eyes 1s infinite;
+    -webkit-animation: colorChanger4 1.6s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
 
-#rect4 {
+#rect5 {
     position: absolute;
     left: 150px;
     top: 150px;
@@ -90,10 +114,75 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: argh-my-eyes 0.5s infinite;
+    -webkit-animation: colorChanger5 1.4s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
+
+
+#rect6 {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    width: 147px;
+    height: 147px;
+    background: red;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    -webkit-animation: colorChanger6 1.2s infinite;
+    /* border-left: 3px solid black; */
+    display: none;
+}
+
+#rect7 {
+    position: absolute;
+    top: 300px;
+    width: 150px;
+    height: 147px;
+    background: red;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    -webkit-animation: colorChanger7 1.1s infinite;
+    /* border-left: 3px solid black; */
+    display: none;
+}
+
+#rect8 {
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    width: 147px;
+    height: 147px;
+    background: red;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    -webkit-animation: colorChanger8 1s infinite;
+    /* border-left: 3px solid black; */
+    display: none;
+}
+
+#rect9 {
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    width: 147px;
+    height: 147px;
+    background: red;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    -webkit-animation: colorChanger9 0.8s infinite;
+    /* border-left: 3px solid black; */
+    display: none;
+}
+
+
 
 #lblColor {
     position: absolute;
@@ -101,7 +190,7 @@ input, button, label {
     top: 300px;
 }
 
-@keyframes argh-my-eyes {
+@keyframes colorChanger {
     0% { background-color: orange}
     20.5% { background-color: orange}
 
@@ -117,6 +206,153 @@ input, button, label {
     80.6%{ background-color: red}
     100% { background-color: red}
 } 
+
+@keyframes colorChanger2 {
+    0% { background-color: blue}
+    20.5% { background-color: blue}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6%{ background-color: yellow}
+    60.5% { background-color: yellow}
+
+    60.6%{ background-color: green}
+    80.5% { background-color: green}
+
+    80.6%{ background-color: red}
+    100% { background-color: red}
+} 
+
+@keyframes colorChanger3 {
+    0% { background-color: yellow}
+    20.5% { background-color: yellow}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6% { background-color: blue}
+    60.5% { background-color: blue}
+
+    60.6%{ background-color: green}
+    80.5% { background-color: green}
+
+    80.6%{ background-color: red}
+    100% { background-color: red}
+} 
+
+@keyframes colorChanger4 {
+    0% { background-color: yellow}
+    20.5% { background-color: yellow}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6% { background-color: red}
+    60.5% { background-color: red}
+
+    60.6%{ background-color: green}
+    80.5% { background-color: green}
+
+    80.6%{ background-color: blue}
+    100% { background-color: blue}
+} 
+
+@keyframes colorChanger5 {
+    0% { background-color: yellow}
+    20.5% { background-color: yellow}
+
+    20.6% { background-color: orange}
+    40.5% { background-color: orange}
+
+    40.6% { background-color: green}
+    60.5% { background-color:green}
+
+    60.6%{ background-color: red}
+    80.5% { background-color:red}
+
+    80.6%{ background-color: blue}
+    100% { background-color: blue}
+} 
+
+@keyframes colorChanger6 {
+    0% { background-color: red}
+    20.5% { background-color: red}
+
+    20.6% { background-color: blue}
+    40.5% { background-color: blue}
+
+    40.6% { background-color: green}
+    60.5% { background-color:green}
+
+    60.6%{ background-color: yellow}
+    80.5% { background-color:yellow}
+
+    80.6%{ background-color: orange}
+    100% { background-color: orange}
+} 
+
+@keyframes colorChanger7 {
+    0% { background-color: red}
+    20.5% { background-color: red}
+
+    20.6% { background-color: yellow}
+    40.5% { background-color: yellow}
+
+
+    40.6% { background-color: green}
+    60.5% { background-color:green}
+
+    60.6%{ background-color: orange}
+    80.5% { background-color:orange}
+
+    80.6%{ background-color: blue}
+    100% { background-color: blue}
+}
+
+@keyframes colorChanger8 {
+    0% { background-color: red}
+    16.6% { background-color: red}
+
+    16.7% { background-color: purple}
+    32.2% { background-color: purple}
+
+    32.3% { background-color: green}
+    48.9% { background-color: green}
+
+    49% { background-color: yellow}
+    65.6% { background-color:yellow}
+
+    65.7%{ background-color: blue}
+    82.3% { background-color:blue}
+
+    82.4%{ background-color: orange}
+    100% { background-color: orange}
+}
+
+@keyframes colorChanger9 {
+    0% { background-color: green}
+    12.5% { background-color: green}
+
+    25.1% { background-color:blue}
+    37.5% { background-color: blue}
+
+    50.1%{ background-color: indigo}
+    62.5% { background-color:indigo}
+
+    62.6%{ background-color: red}
+    75% { background-color: red}
+    
+    75.1%{ background-color: yellow}
+    87.5% { background-color: yellow}
+
+    87.6%{ background-color: orange}
+    100% { background-color: orange}
+}
+
+
+
+
 
 #verticalBorder {
     position: absolute;
@@ -135,9 +371,9 @@ input, button, label {
 }
 
 #btnPlay {
-    top: 66%;
-    left: 24%;
-    width: 100px;
+    top: 88%;
+    left: 14%;
+    width: 190px;
     height: 50px;
     position: absolute;
     background-color: blue;
@@ -150,9 +386,9 @@ input, button, label {
 }
 
 #btnTryAgain {
-    top: 66%;
-    left: 40%;
-    width: 100px;
+    top: 88%;
+    left: 32%;
+    width: 190px;
     height: 50px;
     position: absolute;
     background-color: red;
@@ -166,6 +402,20 @@ input, button, label {
 /* #rect1 {
     animation: argh-my-eyes 2s infinite;
 } */
+
+
+#gameData{
+    position: absolute;
+    left: 600px;
+    top: 500px;
+}
+
+
+#btnShowUserData{
+    position: absolute;
+    left: 600px;
+    top: 450px;
+}
 
 .btn3d {
     transition:all .08s linear;
@@ -207,3 +457,4 @@ input, button, label {
     font-size: 16px;
     border-radius: 8px;
 }
+

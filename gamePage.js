@@ -88,6 +88,22 @@ if (checker == 1) {
     startGame()
 }
 
+function tutorial() {
+    console.log("tutorial")
+    var message = ""
+    message += "Welcome fellow gamer! The instructions are simple!\n\n"
+    message += "All you need for this game is timing and the spacebar.\n\n"
+    message += "--> The objective of the game is to make all the rectangles be of the same color."
+    message += "--> At the beginning of the game the first rectangle will keep changing colors until you press the spacebar.\n"
+    message += "--> Pressing the spacebar will make the rectangle the color that the rectangle was when the spacebar was pressed.\n"
+    message += "--> Now that the first rectangle is of a particular color you must make the rest of the rectangles have the same color by timing the spacebar correctly to match the right color.\n"
+    message += "--> You might think this is pretty easy but trust me it isn’t. As you progress past more rectangles the rate at which the colors change will speed up.\n"
+    message += "--> In fact, there will also be a time when the colors change randomly.\n\n"
+    message += "Now that you’ve gotten to know everything get to work and color them rectangles! Good luck! May the odds be in your favor."
+
+    displayAlert(message);
+}
+
 function startGame() {
     console.log("why you no work?")
 
@@ -129,8 +145,10 @@ function startGame() {
                 $("#rect3").css({
                     'display': 'block'
                 })
+                console.log("block 2 paused");
                 counter++;
             } else {
+                displayAlert("Is that all you've got? You can do better than that");
                 // document.getElementById("btnPlay").innerHTML = "Play again"
                 if (!(spaceCheck >= 1)) {
                 end = window.performance.now()
@@ -154,9 +172,12 @@ function startGame() {
                 $("#rect4").css({
                     'display': 'block'
                 })
+                console.log("block 3 paused");
                 counter++;
             } else {
+                displayAlert("You're better than that");
                 if (!(spaceCheck >= 1)) {
+
                     // document.getElementById("btnPlay").innerHTML = "Play again"
                     end = window.performance.now()
                     end -= start
@@ -166,35 +187,166 @@ function startGame() {
                     spaceCheck++
 
             }
-            }
-            else if (counter === 3) {
+            } else if (counter === 3) {
                 $("#rect4").css({
                     '-webkit-animation-play-state': 'paused'
                 })
 
                 var color4 = $("#rect4").css("background-color")
 
-                if (color == color4) {
-                    console.log("You win!")
+                // if (color == color4) {
+                //     console.log("You win!")
 
+                // } else {
+                //     console.log("You lost :(")
+                // }
+                if (color == color4) {
+
+                    $("#rect5").css({
+                        'display': 'block'
+                    })
+                    console.log("block 4 paused");
+                    counter++;
                 } else {
-                    console.log("You lost :(")
-                }
                 if (!(spaceCheck >= 1)) {
-                    // document.getElementById("btnPlay").innerHTML = "Play again"
+                    displayAlert("Is that all you've got?");
                     end = window.performance.now()
                     end -= start
                     end /= 1000
                     console.log(end + " secs")
                     }
                     spaceCheck++
+                }
 
-                // $("#rect4").css({
-                //     'display': 'block'
-                // })
-                counter++;
+            } else if (counter === 4) {
+                $("#rect5").css({
+                    '-webkit-animation-play-state': 'paused'
+                })
+
+                var color5 = $("#rect5").css("background-color")
+
+                if (color == color5) {
+
+                    $("#rect6").css({
+                        'display': 'block'
+                    })
+                    console.log("block 5 paused");
+                    counter++;
+                } else {
+                    if (!(spaceCheck >= 1)) {
+                        displayAlert("You're getting there!");
+                        end = window.performance.now()
+                        end -= start
+                        end /= 1000
+                        console.log(end + " secs")
+                        }
+                        spaceCheck++
+    
+                }
+
+            } else if (counter === 5) {
+                $("#rect6").css({
+                    '-webkit-animation-play-state': 'paused'
+                })
+
+                var color6 = $("#rect6").css("background-color")
+
+                if (color == color6) {
+
+                    $("#rect7").css({
+                        'display': 'block'
+                    })
+                    console.log("block 6 paused");
+                    counter++;
+                } else {
+                    displayAlert("You got pretty far! Try again");
+
+                    if (!(spaceCheck >= 1)) {
+                        // document.getElementById("btnPlay").innerHTML = "Play again"
+                        end = window.performance.now()
+                        end -= start
+                        end /= 1000
+                        console.log(end + " secs")
+                        }
+                        spaceCheck++
+    
+                }
+
+            } else if (counter === 6) {
+                $("#rect7").css({
+                    '-webkit-animation-play-state': 'paused'
+                })
+
+                var color7 = $("#rect7").css("background-color")
+
+                if (color == color7) {
+
+                    $("#rect8").css({
+                        'display': 'block'
+                    })
+                    console.log("block 7 paused");
+                    counter++;
+                } else {
+                    displayAlert("You were so close! Try again");
+
+                    if (!(spaceCheck >= 1)) {
+                        // document.getElementById("btnPlay").innerHTML = "Play again"
+                        end = window.performance.now()
+                        end -= start
+                        end /= 1000
+                        console.log(end + " secs")
+                        }
+                        spaceCheck++
+    
+                }
+            } else if (counter === 7) {
+                $("#rect8").css({
+                    '-webkit-animation-play-state': 'paused'
+                })
+
+                var color8 = $("#rect8").css("background-color")
+
+                if (color == color8) {
+
+                    $("#rect9").css({
+                        'display': 'block'
+                    })
+                    console.log("block 8 paused");
+                    counter++;
+                } else {
+                    displayAlert("You were so close! Try again");
+                    if (!(spaceCheck >= 1)) {
+                        // document.getElementById("btnPlay").innerHTML = "Play again"
+                        end = window.performance.now()
+                        end -= start
+                        end /= 1000
+                        console.log(end + " secs")
+                        }
+                        spaceCheck++
+    
+                }
+            } else if (counter === 8) {
+                $("#rect9").css({
+                    '-webkit-animation-play-state': 'paused'
+                })
+
+                var color9 = $("#rect9").css("background-color")
+
+                if (color == color9) {
+                    console.log("you won")
+                } else {
+                    displayAlert("You were so close! Try again");
+                    if (!(spaceCheck >= 1)) {
+                        // document.getElementById("btnPlay").innerHTML = "Play again"
+                        end = window.performance.now()
+                        end -= start
+                        end /= 1000
+                        console.log(end + " secs")
+                        }
+                        spaceCheck++
+    
+                }
             }
-
         }
     })
 }
