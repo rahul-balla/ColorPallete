@@ -9,11 +9,18 @@
 // var user = 
 
 function body_onload1(){
-  // console.log(globalDisplayName)
+  var username;
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      username = user.displayName;
+        console.log(user.displayName)
+    //   window.location.href = "gamePage.html"
+    }
+    else {
+      window.location.href = "indexNew.html"
+    }
+  });
 
-  var user = firebase.auth().currentUser;
-  console.log(user);
-  // console.log("user's display name: " + user.displayName);
   var socket = io.connect('http://localhost:8000');
   // var handle = document.getElementById("handle");
   var message = document.getElementById("message");
@@ -39,7 +46,7 @@ function body_onload1(){
   })
 
  socket.on('chat', function(data){
-    output.innerHTML += '<p><strong>' + "user.displayName" + ':</strong> ' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
   });
 } 
 
