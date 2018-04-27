@@ -37,7 +37,7 @@ function body_onload1(){
   // {
   // console.log("user's display name: " + user.displayName);
 
-  var socket = io.connect('http://localhost:8000');
+  var socket = io.connect();
   // var handle = document.getElementById("handle");
   var message = document.getElementById("message");
   var send = document.getElementById("send");
@@ -64,7 +64,7 @@ function body_onload1(){
 
     
   console.log("want to print username: "  + username1);
-    output.innerHTML += '<p><strong>' + username1 + ':</strong> ' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
 
   });
 } 
