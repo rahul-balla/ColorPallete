@@ -2,6 +2,7 @@
 <head>
     <link href="./gamePage.css" rel="stylesheet">
     <link href="./gameChat.css" rel="stylesheet">
+    <link href="./signInModal.css" rel="stylesheet">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.dev.js"></script> 
 </head>
 
@@ -49,6 +50,19 @@
     <!-- borders drawn to designate the location of chat and leaderboard (delete all these border when page is done) -->
         <div id="verticalBorder"></div>
         <div id="horizontalBorder"></div>
+
+    <div id="divAlert" class="divModal">
+        <div id="divAlertForm" class="divModalForm">
+            <div class="divModalTitle">
+                ColorPalette
+                <span id="spanAlertX" class="spanModalX" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="divAlertMessage"><label id = "lblAlertMessage">hello</div>
+
+            <button id="btnAlertOK" onclick="btnOK_onclick()">OK</button>
+        </div>
+    </div>
+    
 
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>

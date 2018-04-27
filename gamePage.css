@@ -135,7 +135,7 @@ input, button, label {
     border-bottom: 3px solid black;
     border-top: 3px solid black;
     border-right: 3px solid black;
-    -webkit-animation: colorChanger7 1s infinite;
+    -webkit-animation: colorChanger7 1.1s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -151,7 +151,7 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: colorChanger8 0.8s infinite;
+    -webkit-animation: colorChanger8 1s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -167,7 +167,7 @@ input, button, label {
     border-top: 3px solid black;
     border-right: 3px solid black;
     border-left: 3px solid black;
-    -webkit-animation: colorChanger9 0.5s infinite;
+    -webkit-animation: colorChanger9 0.8s infinite;
     /* border-left: 3px solid black; */
     display: none;
 }
@@ -321,17 +321,11 @@ input, button, label {
 }
 
 @keyframes colorChanger9 {
-    0% { background-color:pink}
-    12.5% { background-color: pink}
+    0% { background-color: green}
+    12.5% { background-color: green}
 
-    12.6% { background-color: brown}
-    25% { background-color: brown}
-
-    25.1% { background-color:magenta}
-    37.5% { background-color: magenta}
-
-    37.6% { background-color:grey}
-    50% { background-color:grey}
+    25.1% { background-color:blue}
+    37.5% { background-color: blue}
 
     50.1%{ background-color: indigo}
     62.5% { background-color:indigo}
@@ -367,9 +361,9 @@ input, button, label {
 }
 
 #btnPlay {
-    top: 66%;
-    left: 22%;
-    width: 120px;
+    top: 88%;
+    left: 14%;
+    width: 190px;
     height: 50px;
     position: absolute;
     background-color: blue;
@@ -382,9 +376,9 @@ input, button, label {
 }
 
 #btnTryAgain {
-    top: 66%;
-    left: 33%;
-    width: 120px;
+    top: 88%;
+    left: 32%;
+    width: 190px;
     height: 50px;
     position: absolute;
     background-color: red;

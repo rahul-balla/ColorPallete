@@ -132,6 +132,7 @@ function startGame() {
                 console.log("block 2 paused");
                 counter++;
             } else {
+                displayAlert("Is that all you've got? You can do better than that");
                 // document.getElementById("btnPlay").innerHTML = "Play again"
                 if (!(spaceCheck >= 1)) {
                 end = window.performance.now()
@@ -158,7 +159,9 @@ function startGame() {
                 console.log("block 3 paused");
                 counter++;
             } else {
+                displayAlert("You're better than that");
                 if (!(spaceCheck >= 1)) {
+
                     // document.getElementById("btnPlay").innerHTML = "Play again"
                     end = window.performance.now()
                     end -= start
@@ -190,7 +193,7 @@ function startGame() {
                     counter++;
                 } else {
                 if (!(spaceCheck >= 1)) {
-                    // document.getElementById("btnPlay").innerHTML = "Play again"
+                    displayAlert("Is that all you've got?");
                     end = window.performance.now()
                     end -= start
                     end /= 1000
@@ -215,7 +218,7 @@ function startGame() {
                     counter++;
                 } else {
                     if (!(spaceCheck >= 1)) {
-                        // document.getElementById("btnPlay").innerHTML = "Play again"
+                        displayAlert("You're getting there!");
                         end = window.performance.now()
                         end -= start
                         end /= 1000
@@ -240,6 +243,8 @@ function startGame() {
                     console.log("block 6 paused");
                     counter++;
                 } else {
+                    displayAlert("You got pretty far! Try again");
+
                     if (!(spaceCheck >= 1)) {
                         // document.getElementById("btnPlay").innerHTML = "Play again"
                         end = window.performance.now()
@@ -266,6 +271,8 @@ function startGame() {
                     console.log("block 7 paused");
                     counter++;
                 } else {
+                    displayAlert("You were so close! Try again");
+
                     if (!(spaceCheck >= 1)) {
                         // document.getElementById("btnPlay").innerHTML = "Play again"
                         end = window.performance.now()
@@ -291,6 +298,7 @@ function startGame() {
                     console.log("block 8 paused");
                     counter++;
                 } else {
+                    displayAlert("You were so close! Try again");
                     if (!(spaceCheck >= 1)) {
                         // document.getElementById("btnPlay").innerHTML = "Play again"
                         end = window.performance.now()
@@ -311,6 +319,7 @@ function startGame() {
                 if (color == color9) {
                     console.log("you won")
                 } else {
+                    displayAlert("You were so close! Try again");
                     if (!(spaceCheck >= 1)) {
                         // document.getElementById("btnPlay").innerHTML = "Play again"
                         end = window.performance.now()
