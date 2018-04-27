@@ -1,7 +1,9 @@
 function body_onload1(){
   var username;
+  var userId;
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
+      userId = user;
       // var authRef = firebase.database().ref().getAuth();
       // var authRef = new Firebase("https://colorpalettecs252.firebaseio.com");
       authDataObj = firebase.auth();
