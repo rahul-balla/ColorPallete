@@ -75,7 +75,7 @@ function craeteUserTable(){
   ref.on("child_added", snap => {
     var username = snap.child("userName").val();
 	var email = snap.child("userEmail").val();
-	console.log("name: " + username);
+	console.log("name: " + user	name);
 	console.log("email: " + email);
 	
 	$("#user_table_body").append("<tr><td>" + username + "</td><td>" + email + "</td><tr>");
@@ -87,15 +87,17 @@ function filterByScore(){
 
 }
 
-var ref1 = firebase.database().ref().child('games');
-$scope.games = $firebaseArray(ref1);
+// var ref1 = firebase.database().ref().child('games');
+// 	var uNameTxt = userName.value;
+// 	var uScoreTxt = uScore.value;
+// 	var uTimestampTxt = uTimestamp.value;
+// $scope.games = $firebaseArray(ref1);
 
-$scope.addGamesIntoTable = function(){
-	if ($scope.)
-	var gamesRef = firebase.database().ref().child("games");
-	gamesRef.push({
-		username: uNameTxt,
-		score: uScoreTxt,
-		timeStamp: uTimestampTxt
-	})
-}
+// $scope.addGamesIntoTable = function(userName){
+// 	if ($scope.gameList.indexOf(userName == -1))
+// 	ref1.push({
+// 		username: uNameTxt,
+// 		score: uScoreTxt,
+// 		timeStamp: uTimestampTxt
+// 	})   
+// }
