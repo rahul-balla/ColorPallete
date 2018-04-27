@@ -7,7 +7,15 @@ var firebase = require('firebase');
 var cors = require('cors');
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var promise = require('promise');
+
+
+// var port = 3000;
+// var fs = require('fs'); 
+// // var https = require('https'); 
+// // var options = {
+// //   key: fs.readFileSync('key.pem'),
+// //   cert: fs.readFileSync('cert.pem')
+// };
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -62,3 +70,9 @@ var port = process.env.PORT || 8000;
 http.listen(port, function () {
   console.log("Running server on port " + port);
 })
+
+// var a = https.createServer(options, function (req, res) {
+//   res.writeHead(200);
+//   res.end("hello world\n");
+//   console.log("https");
+// }).listen(8000);
