@@ -2,6 +2,7 @@
 <head>
     <link href="./gamePage.css" rel="stylesheet">
     <link href="./gameChat.css" rel="stylesheet">
+    <link href="./signInModal.css" rel="stylesheet">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.dev.js"></script> 
 </head>
 
@@ -10,15 +11,21 @@
         <div id = "navBar">
             <!-- Sign Out button -->
             <button id = "btnSignOut" onclick = "onSignOut()">Sign Out</button>
+            <button id = "btnTutorial" onclick = "tutorial()">Tutorial</button>
         </div>
 
 
 
     <div id = "wholeRectangle">
-        <div id="rect1" class="rectangle1"></div>
+        <div id="rect1"></div>
         <div id="rect2"></div>
         <div id="rect3"></div>
         <div id="rect4"></div>
+        <div id="rect5"></div>
+        <div id="rect6"></div>
+        <div id="rect7"></div>
+        <div id="rect8"></div>
+        <div id="rect9"></div>
     </div>
 
     <button type="button" class="btn btn-success btn-lg btn3d" onclick="play2()"><span class="glyphicon glyphicon-ok"></span>Play</button>
@@ -26,7 +33,7 @@
     <!-- <button id = "btnTryAgain" value="Refresh Page" onclick="reloadPlay()">Try Again</button> -->
     <button type="button" class="btn btn-primary btn-lg btn3d" onclick="reloadPlay()"><span class="glyphicon glyphicon-cloud"></span>Try Again</button>
 
-
+   
 
 
     <!-- Chat Box -->
@@ -46,7 +53,24 @@
     <!-- borders drawn to designate the location of chat and leaderboard (delete all these border when page is done) -->
         <!-- <div id="verticalBorder"></div>
         <div id="horizontalBorder"></div>
-        <label id = "lblColor">Color</label> -->
+
+
+    <div id="divAlert" class="divModal">
+        <div id="divAlertForm" class="divModalForm">
+            <div class="divModalTitle">
+                ColorPalette
+                <span id="spanAlertX" class="spanModalX" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="divAlertMessage"><label id = "lblAlertMessage">hello</div>
+
+            <button id="btnAlertOK" onclick="btnOK_onclick()">OK</button>
+        </div>
+    </div>
+    
+    
+
+//        <label id = "lblColor">Color</label> -->
+
 
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>
