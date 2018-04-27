@@ -74,3 +74,38 @@ input, button, label {
     border: 2px solid black;
     padding: 5px;
 }
+.gameDataDiv{
+    position: relative;
+    /* left: 700px;
+    top: 550px; */
+    height: 100px;
+    width: 100px;
+    top: 65%;
+    left: 61%;
+    border: black;
+}
+#LeaderBoard{
+	position: absolute;
+	left: 850px;
+    top: 450px;
+    top: 57%;
+    left: 61%;
+}
+
+/* #gameTable{
+	position: absolute;
+	left:450px;
+	top:280px;
+} */
+/* .gameDataDiv {
+	overflow-y: scroll;
+	height: 200px;
+} */
+
+/* #game_table_body{
+	position: absolute;
+	overflow-y: scroll;
+	left:450px;
+    top: 250px;
+    height: 100px;
+} */

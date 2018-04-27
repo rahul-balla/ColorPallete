@@ -374,6 +374,22 @@ function startGame() {
     })
 }
 
+// function btnCreateGameTable_onclick(){
+// 	window.alert("creating game table");
+// 	var gamesRef = firebase.database().ref().child("games");
+
+// 	gamesRef.on("child_added", snap=>{
+// 		var uNameTxt = snap.child("username").val();
+// 		var uScoreTxt = snap.child("score").val();
+// 		var uTimestampTxt = snap.child("timeStamp").val();
+// 		console.log("uName: " + uNameTxt);
+// 		console.log("uScore: " + uScoreTxt);
+// 		console.log("uTimeStamp: " + uTimestampTxt);
+
+// 		$("#game_table_body").append("<tr><td>" + uNameTxt + "</td><td>" + uScoreTxt + "</td><td>" + uTimestampTxt + "</td><tr>");
+// 	})
+// }
+
 
 //     document.getElementById("btnPlay").addEventListener("click", myFunc)
 
