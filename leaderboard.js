@@ -86,3 +86,16 @@ function craeteUserTable(){
 function filterByScore(){
 
 }
+
+var ref1 = firebase.database().ref().child('games');
+$scope.games = $firebaseArray(ref1);
+
+$scope.addGamesIntoTable = function(){
+	if ($scope.)
+	var gamesRef = firebase.database().ref().child("games");
+	gamesRef.push({
+		username: uNameTxt,
+		score: uScoreTxt,
+		timeStamp: uTimestampTxt
+	})
+}
