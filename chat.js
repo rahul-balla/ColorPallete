@@ -37,7 +37,8 @@ function body_onload1(){
   // {
   // console.log("user's display name: " + user.displayName);
 
-  var socket = io.connect();
+  var host = location.origin;
+  var socket = io.connect(host, {port: 8000});
   // var handle = document.getElementById("handle");
   var message = document.getElementById("message");
   var send = document.getElementById("send");
