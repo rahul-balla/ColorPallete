@@ -1,7 +1,7 @@
 function body_onload1(){
+
   
   var username;
-  
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       username = user.displayName;
@@ -9,6 +9,7 @@ function body_onload1(){
     //   window.location.href = "gamePage.html"
     }
     else {
+
       window.location.href = "index.html"
     }
   });
@@ -35,6 +36,7 @@ function body_onload1(){
   // else
   // {
   // console.log("user's display name: " + user.displayName);
+
   var socket = io.connect('http://localhost:8000');
   // var handle = document.getElementById("handle");
   var message = document.getElementById("message");
@@ -59,9 +61,11 @@ function body_onload1(){
     }
   })
  socket.on('chat', function(data){
+
     
   console.log("want to print username: "  + username1);
     output.innerHTML += '<p><strong>' + username1 + ':</strong> ' + data.message + '</p>';
+
   });
 } 
 // }

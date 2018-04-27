@@ -9,7 +9,8 @@ function body_onload(){
     // console.log("user is: " + user);
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          window.location.href = "gamePage.html"
+            console.log(user.displayName)
+        //   window.location.href = "gamePage.html"
         }
     });
 }
