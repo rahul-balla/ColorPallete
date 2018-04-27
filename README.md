@@ -12,7 +12,7 @@ Samrat : sam@purdue.edu
 Rahul : 
 
  
-#Description of Project:
+# Description of Project:
 description goes here
 
 # Technologies used:
@@ -21,3 +21,5 @@ Firebase
 Heroku
 Words API
 NPM, Express, ScrollMagic, TweenMax
+
+# DEMO video
