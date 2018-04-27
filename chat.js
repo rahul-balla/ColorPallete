@@ -1,20 +1,43 @@
-// $(function () {
-//     var socket = io();
-//     $('form').submit(function(){
-//       socket.emit('chat message', $('#m').val());
-//       $('#m').val('');
-//       return false;
-//     });
-// });
-// var user = 
-
 function body_onload1(){
-  // console.log(globalDisplayName)
 
-  var user = firebase.auth().currentUser;
-  console.log(user);
+  
+  var username;
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      username = user.displayName;
+        console.log(user.displayName)
+    //   window.location.href = "gamePage.html"
+    }
+    else {
+
+      window.location.href = "index.html"
+    }
+  });
+
+
+  // var user = firebase.auth().currentUser;
+  // console.log(user);
+
+
+  var ref = firebase.database().ref().child('users');
+  var username1;
+  ref.on("child_added", snap => {
+    var username1 = snap.child("userName").val();
+    var email = snap.child("userEmail").val();
+    console.log("name: " + username1);
+    console.log("email: " + email);
+  });
+  
+
+  
+  // if (user!= null){
+  //   window.location.href = "index.html";
+  // }
+  // else
+  // {
   // console.log("user's display name: " + user.displayName);
-  var socket = io.connect('http://localhost:8000');
+
+  var socket = io.connect();
   // var handle = document.getElementById("handle");
   var message = document.getElementById("message");
   var send = document.getElementById("send");
@@ -37,12 +60,29 @@ function body_onload1(){
       document.getElementById("message").value = "";
     }
   })
-
  socket.on('chat', function(data){
-    output.innerHTML += '<p><strong>' + "user.displayName" + ':</strong> ' + data.message + '</p>';
+
+    
+  console.log("want to print username: "  + username1);
+    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
+
   });
 } 
+// }
 
+
+function btnShowUserData_onclick(){
+	// Get elements
+	var preUserData = document.getElementById('userData');
+	
+	// create reference
+	var dbRefUser = firebase.database().ref().child('users');
+
+	// sync object changes
+	dbRefUser.on('value', snap => {
+		preUserData.innerText = JSON.stringify(snap.val(), null, 3);
+	});
+}
 
 
 
@@ -62,3 +102,4 @@ function onSignOut () {
     // An error happened.
   });
 }
+
