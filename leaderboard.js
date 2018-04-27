@@ -19,8 +19,6 @@ function body_onload(){
 		messagingSenderId: "306554441966"
 	};
 	firebase.initializeApp(config);	
-
-	craeteUserTable();
 }
 
 
@@ -69,23 +67,40 @@ function btnShowGameData_onclick(){
 	});
 }
 
-function craeteUserTable(){
+function btnCreateUserTable_onclick(){
+	window.alert("creating user table");
 	var ref = firebase.database().ref().child('users');
 
   ref.on("child_added", snap => {
     var username = snap.child("userName").val();
 	var email = snap.child("userEmail").val();
-	console.log("name: " + user	name);
+	console.log("name: " + username);
 	console.log("email: " + email);
 	
 	$("#user_table_body").append("<tr><td>" + username + "</td><td>" + email + "</td><tr>");
   });
 }
 
-// ranking
-function filterByScore(){
 
+function btnCreateGameTable_onclick(){
+	window.alert("creating game table");
+	var gamesRef = firebase.database().ref().child("games");
+
+	gamesRef.on("child_added", snap=>{
+		var uNameTxt = snap.child("username").val();
+		var uScoreTxt = snap.child("score").val();
+		var uTimestampTxt = snap.child("timeStamp").val();
+		console.log("uName: " + uNameTxt);
+		console.log("uScore: " + uScoreTxt);
+		console.log("uTimeStamp: " + uTimestampTxt);
+
+		$("#game_table_body").append("<tr><td>" + uNameTxt + "</td><td>" + uScoreTxt + "</td><td>" + uTimestampTxt + "</td><tr>");
+	})
 }
+
+
+
+
 
 // var ref1 = firebase.database().ref().child('games');
 // 	var uNameTxt = userName.value;

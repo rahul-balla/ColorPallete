@@ -38,11 +38,13 @@
 	<button id="btnAddUser" onclick="btnAddUser_onclick()">Storing user to Firebase</button>
 	<button id="btnAddGameData" onclick="btnAddGameData_onclick()">Storing gamedata to Firebase</button>
 	<button id="btnShowGameData" onclick="btnShowGameData_onclick()"> Show Game data</button>
+	<button id="btnCreateUserTable" onclick="btnCreateUserTable_onclick()"> create user table </button>
+	<button id="btnCreateGameTable" onclick="btnCreateGameTable_onclick()"> create game table </button>
 	
 
-<div class = "mainDiv" align = "left">
-	<h1> All users</h1>
-	<table>
+<h1 id = "LeaderBoard0"> LeaderBoard0</h1>
+<div class = "userDataDiv" align = "left">	
+	<table id="userTable" border = "1">
 		<thead>
 			<td>Name</td>
 			<td>Email</td>
@@ -53,9 +55,9 @@
 	</table>
 </div>
 
+<h1 id = "LeaderBoard"> LeaderBoard</h1>
 <div class = "gameDataDiv" align = "left">
-		<h1> All games</h1>
-		<table>
+		<table id="gameTable" border = "1">
 			<thead>
 				<td>Username</td>
 				<!-- <td>Email</td> -->
@@ -70,8 +72,7 @@
 		</table>
 	</div>
 
-	<h1> printing table </h1>
-	<li></li>
+	
 <!-- <div id="container">
   <div class="row">
     <div class="name">Player1</div><div class="score">430</div>
@@ -94,7 +95,7 @@
   </div>
 </div> -->
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-<script src="https://code.jqeury.com/jquery-3.1.0.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script language="javascript" type="text/javascript" src="leaderboard.js"></script>
 
 </body>

@@ -2,6 +2,52 @@ body{
 	background-color: skyblue;
 }
 
+#LeaderBoard0{
+	position: absolute;
+	left: 50px;
+	top: 200px;
+}
+
+#userTable{
+	position: absolute;
+	left:50px;
+	top:280px;
+}
+/* .userDataDiv {
+	position: absolute;
+	left: 500px;
+	width: 100px;
+	height: 200px;
+} */
+
+#user_table_body{
+	position: absolute;
+	overflow-y: scroll;
+	height: 200px;
+}
+
+#LeaderBoard{
+	position: absolute;
+	left: 450px;
+	top: 200px;
+}
+
+#gameTable{
+	position: absolute;
+	left:450px;
+	top:280px;
+}
+/* .gameDataDiv {
+	overflow-y: scroll;
+	height: 200px;
+} */
+
+#game_table_body{
+	position: absolute;
+	overflow-y: scroll;
+	/* left:450px; */
+	height: 200px;
+}
 /* #container {
 	width: 600px;
 	height: auto;
