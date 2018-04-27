@@ -17,7 +17,9 @@ app.use(bodyParser.urlencoded({
 
 // app.use(express.static('/Users/rahulballa/Desktop/ColorPallete'))
 // app.use('/auth/signin', express.static('/Users/Samrat/Desktop/ColorPallete'))
-app.use('/auth/signin', express.static('/Users/rahulballa/Desktop/ColorPallete'))
+// app.use('/auth/signin', express.static('/Users/rahulballa/Desktop/ColorPallete'))
+app.use('/auth/signin', express.static(path.join(__dirname, ''))); 
+app.use( express.static( "Public" ) );
 // app.use('/auth/signin', express.static('/Users/kimeric/Desktop/CS252/ColorPallete'))
 
 app.get('/', function (req, res) {
@@ -27,11 +29,10 @@ app.get('/', function (req, res) {
 
 app.get('/auth/signin', function (req, res) {
   console.log("inside /auth/signin post")
-  res.sendFile(path.join(__dirname + '/indexNew.html'));
+  res.sendFile(/*path.join(__dirname + */'indexNew.html');
 })
 
 app.use('/game', function (req, res) {
-
   res.sendFile(path.join(__dirname + '/game.html'));
   // console.log("path: " + __dirname + '/game.html');
   //res.render('game.html');

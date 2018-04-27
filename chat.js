@@ -25,6 +25,8 @@ function body_onload1(){
       message: message.value
 
     })
+      document.getElementById("message").value = "";
+      // document.getElementById
   })
 
   document.addEventListener('keydown', (event) => {
@@ -32,7 +34,7 @@ function body_onload1(){
       socket.emit('chat', {
         message: message.value
       })
-      document.getElementById("message").innerHTML = "";
+      document.getElementById("message").value = "";
     }
   })
 
