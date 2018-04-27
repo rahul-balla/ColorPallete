@@ -61,7 +61,7 @@
     
     <!-- borders drawn to designate the location of chat and leaderboard (delete all these border when page is done) -->
         <!-- <div id="verticalBorder"></div>
-        <div id="horizontalBorder"></div>
+        <div id="horizontalBorder"></div> -->
 
 
     <div id="divAlert" class="divModal">
@@ -75,26 +75,38 @@
             <button id="btnAlertOK" onclick="btnOK_onclick()">OK</button>
         </div>
     </div>
+
+    <!-- <div id="divAlertBig" class="divModal">
+        <div id="divAlertForm" class="divModalForm">
+            <div class="divModalTitle">
+                ColorPalette
+                <span id="spanAlertX" class="spanModalX" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="divAlertMessage"><label id = "lblAlertMessage">hello</div>
+
+            <button id="btnAlertOK" onclick="btnOK_onclick()">OK</button>
+        </div>
+    </div> -->
     
     
 
-//        <label id = "lblColor">Color</label> -->
+<!-- //        <label id = "lblColor">Color</label> -->
 
 
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>
-          // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyCBY1DZnogGxG4XOxRvRHnigMS4XJ9Q094",
-                authDomain: "colorpalettecs252.firebaseapp.com",
-                databaseURL: "https://colorpalettecs252.firebaseio.com",
-                projectId: "colorpalettecs252",
-                storageBucket: "colorpalettecs252.appspot.com",
-                messagingSenderId: "306554441966"
-            };
-            firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCBY1DZnogGxG4XOxRvRHnigMS4XJ9Q094",
+            authDomain: "colorpalettecs252.firebaseapp.com",
+            databaseURL: "https://colorpalettecs252.firebaseio.com",
+            projectId: "colorpalettecs252",
+            storageBucket: "colorpalettecs252.appspot.com",
+            messagingSenderId: "306554441966"
+        };
+        firebase.initializeApp(config);
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
     <script type = "text/javascript" src = "./gamePage.js"></script>
     <script type = "text/javascript" src = "chat.js"></script>        
     <script type = "text/javascript" src = "./func.js"></script> 
