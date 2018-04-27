@@ -1,6 +1,4 @@
 function body_onload1(){
-
-  
   var username;
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -9,8 +7,8 @@ function body_onload1(){
     //   window.location.href = "gamePage.html"
     }
     else {
-
-      window.location.href = "index.html"
+      window.location.href = "index.html";
+      displayAlert("Please sign in first");
     }
   });
 
@@ -64,8 +62,8 @@ function body_onload1(){
  socket.on('chat', function(data){
 
     
-  console.log("want to print username: "  + username1);
-    output.innerHTML += '<p><strong>' + username + ':</strong> ' + data.message + '</p>';
+  console.log("want to print username: "  + username);
+    output.innerHTML += '<p><strong>' + username1 + ':</strong> ' + data.message + '</p>';
 
   });
 } 

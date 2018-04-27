@@ -169,15 +169,17 @@ input, button, label {
     transform: translateX(-50%); 
 }
 
-#divAlertForm {
-    position: fixed;
-    width:500px;
+#divAlertBig {
+    position: absolute;
+    width:650px;
     height:400px;
     /* display: block; */
-    top:40%;
+    top:20%;
     transform: translateY(-50%); 
     left:50%;
     transform: translateX(-50%); 
+    display: none;
+    justify-content: center;
 }
 
 #divAlertMessage {
@@ -192,9 +194,32 @@ input, button, label {
     justify-content:center;
     align-items:center;
 }
+#divAlertMessageBig {
+    position:absolute;
+    height:80px;
+    left:10px;
+    top:40px;
+    width:600px;
+    font-family:sans-serif;
+    font-size:16px;
+    /* display: flex; */
+    justify-content:center;
+    align-items:center;
+    /* padding: 10px; */
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
 
 #btnAlertOK {
     position:absolute;
     left:340px;
     top:120px;
+}
+
+#btnAlertOKBig {
+    position:absolute;
+    left:590px;
+    top:360px;
 }

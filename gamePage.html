@@ -14,6 +14,9 @@
             <button id = "btnTutorial" onclick = "tutorial()">Tutorial</button>
         </div>
 
+    <h1 id = "lblScore">Score: </h1>
+    <h1 id = "scoreChange"></h1>
+
     <div id = "wholeRectangle">
         <div id="rect1"></div>
         <div id="rect2"></div>
@@ -76,17 +79,17 @@
         </div>
     </div>
 
-    <div id="divAlert" class="divModal">
+    <!-- <div id="divAlert" class="divModal"> -->
         <div id="divAlertBig" class="divModalForm">
             <div class="divModalTitle">
                 ColorPalette
-                <span id="spanAlertX" class="spanModalX" onclick="closeModal()">&times;</span>
+                <span id="spanAlertX" class="spanModalX" onclick="closeModalBig()">&times;</span>
             </div>
-            <div id="divAlertMessage"><label id = "lblAlertMessage">hello</div>
+            <div id="divAlertMessageBig"><label id = "lblAlertMessageBig">hello</div>
 
-            <button id="btnAlertOK" onclick="btnOK_onclick()">OK</button>
+            <button id="btnAlertOKBig" onclick="btnOKBig_onclick()">OK</button>
         </div>
-    </div>
+    <!-- </div> -->
     
 
 <!-- //        <label id = "lblColor">Color</label> -->
@@ -94,7 +97,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>
-        // Initialize Firebase
+        // Initialize Firebase 2018.04.27
         var config = {
             apiKey: "AIzaSyCBY1DZnogGxG4XOxRvRHnigMS4XJ9Q094",
             authDomain: "colorpalettecs252.firebaseapp.com",
@@ -109,6 +112,7 @@
     <script type = "text/javascript" src = "./gamePage.js"></script>
     <script type = "text/javascript" src = "chat.js"></script>        
     <script type = "text/javascript" src = "./func.js"></script> 
+    
 </body>
 
 </html>
