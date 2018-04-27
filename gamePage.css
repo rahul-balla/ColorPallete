@@ -211,11 +211,11 @@ input, button, label {
     0% { background-color: blue}
     20.5% { background-color: blue}
 
-    20.6% { background-color: orange}
-    40.5% { background-color: orange}
+    20.6% { background-color: yellow}
+    40.5% { background-color: yellow}
 
-    40.6%{ background-color: yellow}
-    60.5% { background-color: yellow}
+    40.6%{ background-color: orange}
+    60.5% { background-color: orange}
 
     60.6%{ background-color: green}
     80.5% { background-color: green}
@@ -228,14 +228,14 @@ input, button, label {
     0% { background-color: yellow}
     20.5% { background-color: yellow}
 
-    20.6% { background-color: orange}
-    40.5% { background-color: orange}
+    20.6% { background-color: green}
+    40.5% { background-color: green}
 
     40.6% { background-color: blue}
     60.5% { background-color: blue}
 
-    60.6%{ background-color: green}
-    80.5% { background-color: green}
+    60.6%{ background-color: orange}
+    80.5% { background-color: orange}
 
     80.6%{ background-color: red}
     100% { background-color: red}
@@ -431,15 +431,15 @@ input, button, label {
     -moz-outline-style:none;
 }
 .btn3d:active {
-    top:65%;
+    top:84%;
 }
 
 .btn-success {
     box-shadow:0 0 0 1px #5cb85c inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #4cae4c, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color:#5cb85c;
-    top: 66%;
-    left: 24%;
-    width: 100px;
+    top: 85%;
+    left: 17%;
+    width: 150px;
     height: 50px;
     position: absolute;
     font-size: 16px;
@@ -449,9 +449,9 @@ input, button, label {
 .btn-primary {
     box-shadow:0 0 0 1px #428bca inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #357ebd, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
     background-color:#428bca;
-    top: 66%;
-    left: 40%;
-    width: 100px;
+    top: 85%;
+    left: 32%;
+    width: 150px;
     height: 50px;
     position: absolute;
     font-size: 16px;
