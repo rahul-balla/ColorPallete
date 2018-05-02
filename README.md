@@ -1,6 +1,6 @@
 # Project Name : ColorPallete
 A web app version of the arcade game ColorPallete
-
+[Play it here](https://colorpalettecs252.firebaseapp.com/)
 
 # Document link
 [Color Pallete Google doc](https://docs.google.com/document/d/1wIuFweF4pW8468eem5wnKV6sbSvwuy4cKT3HI9857wM/edit?usp=sharing)
