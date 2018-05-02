@@ -13,7 +13,7 @@ Samrat : <nallas@purdue.edu>
 
 Rahul : <rballa@purdue.edu>
 
- 
+
 # Description of Project:
 A multiplayer web-based game in which there are different shapes with various partitions where the user has to make sure all the partitions have the same color while colors are changing in a random pattern with increasing speed by each partition. Users can join rooms and see who gets the farthest in the game among a group of friends and will be displayed on a leaderboard.
 
