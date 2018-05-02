@@ -23,13 +23,14 @@ A rectangle is divided into 9 partitions. In the first partition, the user can s
 # Technologies used:
 HTML5, CSS, Javascript, node.js, Firebase, npm, express
 
+# Screenshot
+![alt text](https://github.com/rahul-balla/ColorPallete/blob/master/pasted%20image%200.png)
+![alt text](https://github.com/rahul-balla/ColorPallete/blob/master/pasted%20image%200-1.png)
+
 # Video Walkthrough
-[![]](https://youtu.be/Up5rnpN2nQE)
+[![https://github.com/rahul-balla/ColorPallete/blob/master/pasted%20image%200-1.png](http://img.youtube.com/vi/Up5rnpN2nQE/0.jpg)](http://www.youtube.com/watch?v=Up5rnpN2nQE "ColorPallete")
 
 # CS252 classmate projects
 [Other Projects](https://docs.google.com/document/d/e/2PACX-1vR2_HGf58TdvelvZkq0pBo9pN4RriPXWg_ULaiqfyfOw__aGk3bCQrBCVrDr-jK_Qq0c6GM-sZu3iVT/pub)
 
-# Screenshot
-![alt text](https://github.com/rahul-balla/ColorPallete/blob/master/pasted%20image%200.png)
-![alt text](https://github.com/rahul-balla/ColorPallete/blob/master/pasted%20image%200-1.png)
 
